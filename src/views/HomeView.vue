@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
   maskFrame.value.style.scale = maskFrameScale.value.toFixed(2)
 
   const transformPercentage = (scrollPosition / maxScrollPosition) * 100
-  maskFrameTransform.value = 50 - transformPercentage
+  maskFrameTransform.value = 75 - transformPercentage
   maskFrame.value.style.transform = `translateY(${maskFrameTransform.value.toFixed(2)}%)`
 })
 </script>
