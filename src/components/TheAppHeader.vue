@@ -31,6 +31,8 @@ const goHome = () => {
 
 <style scoped>
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,6 +40,8 @@ header {
   height: var(--gs-app-header-height);
   padding: 0 2rem;
   color: var(--gs-black);
+  background: var(--gs-surface-light);
+  z-index: 9999;
 }
 
 .logo-wrapper:hover {

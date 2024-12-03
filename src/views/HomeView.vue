@@ -1,15 +1,36 @@
 <script setup lang="ts">
-import { useDisplay } from 'vuetify'
+import { ref } from 'vue'
 
-const { width } = useDisplay()
+const imageFrameOpacity = ref(0)
+const maskFrameOpacity = ref(0)
+const maskFrameScale = ref(1)
+const maskFrameTransform = ref(1)
+const imageFrame = ref()
+const maskFrame = ref()
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY
+  const maxScrollPosition = document.body.scrollHeight - window.innerHeight
+
+  imageFrameOpacity.value = 1 - scrollPosition / maxScrollPosition
+  imageFrame.value.style.opacity = imageFrameOpacity.value.toFixed(2)
+
+  maskFrameOpacity.value = 0 + scrollPosition / maxScrollPosition
+  maskFrame.value.style.opacity = maskFrameOpacity.value.toFixed(2)
+
+  maskFrameScale.value = 1 + (scrollPosition / maxScrollPosition) * 0.1
+  maskFrame.value.style.scale = maskFrameScale.value.toFixed(2)
+
+  const transformPercentage = (scrollPosition / maxScrollPosition) * 100
+  maskFrameTransform.value = 50 - transformPercentage
+  maskFrame.value.style.transform = `translateY(${maskFrameTransform.value.toFixed(2)}%)`
+})
 </script>
 
 <template>
   <main>
-    <div class="image-frame">
-      <img v-if="width > 1400" src="@/assets/images/gs-demo-1200.png" />
-      <img v-if="width < 1400" src="@/assets/images/gs-demo-900.png" />
-    </div>
+    <div class="image-frame" ref="imageFrame"></div>
+    <div class="mask-frame" ref="maskFrame"></div>
   </main>
 </template>
 
@@ -18,17 +39,27 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: calc(100vh - var(--gs-app-header-height));
+  justify-content: start;
 }
 
 .image-frame {
-  overflow: hidden;
-  overflow-y: scroll;
   padding: 0;
   width: 1200px;
-  height: 50vh;
-  background: var(--gs-primary);
+  height: 2200px;
+  background: url('@/assets/images/gs-demo-1200.png') center top no-repeat;
+  border: 0.5rem solid var(--gs-gray);
+  box-sizing: content-box;
+  border-radius: 1rem;
+  scrollbar-width: none;
+}
+
+.mask-frame {
+  position: absolute;
+  top: 1835px;
+  padding: 0;
+  width: 1200px;
+  min-height: 560px;
+  background: url('@/assets/images/gs-demo-1200.png') center bottom no-repeat;
   border: 0.5rem solid var(--gs-gray);
   box-sizing: content-box;
   border-radius: 1rem;
@@ -38,6 +69,11 @@ main {
 @media screen and (max-width: 1399px) {
   .image-frame {
     width: 900px;
+    background: url('@/assets/images/gs-demo-900.png') center bottom no-repeat;
+  }
+  .mask-frame {
+    width: 900px;
+    background: url('@/assets/images/gs-demo-900.png') center bottom no-repeat;
   }
 }
 </style>
