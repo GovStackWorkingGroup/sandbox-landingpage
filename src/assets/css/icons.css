@@ -1,0 +1,6 @@
+.logo-gs {
+  mask: url('@/assets/images/logo-gs.svg') center / 6rem no-repeat;
+  -webkit-mask: url('@/assets/images/logo-gs.svg') center / 6rem no-repeat;
+  padding: 3rem;
+  background: var(--gs-primary);
+}

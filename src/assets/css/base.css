@@ -1,0 +1,43 @@
+:root {
+  /* colors */
+  --gs-black: #000000;
+  --gs-white: #ffffff;
+  --gs-primary: #003087;
+  --gs-primary-light: #e6efff;
+  --gs-primary-dark: #0f3d51;
+  --gs-disabled: #7687a5;
+  --gs-body: #0f2e66;
+  --gs-surface-light: #f9fbff;
+  --gs-green: #3cd18c;
+  --gs-gray: #757685;
+
+  /* dimensions */
+  --gs-app-header-height: 6rem;
+
+  /* effects */
+  --gs-text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--gs-black);
+  background: var(--gs-surface-light);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  /* line-height: 1.6; */
+  font-family: Roboto, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
