@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 
-const egovPage = ref()
 const egovPageMask = ref()
 
 onMounted(() => {
@@ -15,7 +14,6 @@ onMounted(() => {
     })
   })
 
-  observer.observe(egovPage.value)
   observer.observe(egovPageMask.value)
 })
 </script>
@@ -41,15 +39,29 @@ onMounted(() => {
     <div class="understanding-wrapper">
       <div class="understanding-bg-top-right"></div>
       <div class="understanding-blur"></div>
-      <div class="understanding-text-frame"></div>
-      <div class="understanding-text">
-        <h1>Understanding GovStack Sandbox</h1>
+      <div class="understanding-content"></div>
+    </div>
+
+    <!-- egov intro-->
+    <div class="egov-intro-wrapper">
+      <div class="egov-intro-blur"></div>
+      <div class="egov-intro-text">
+        <h1>
+          Ever Wonder How to Build <br />
+          Digital Government <br />
+          Services?
+        </h1>
+        <p>
+          Step into our Sandbox to explore how modern e-government <br />
+          solutions are created using reusable components, <br />
+          proven patterns, and scalable architecture.
+        </p>
       </div>
     </div>
 
     <!-- egov -->
     <div class="egov-wrapper">
-      <div class="egov-page" ref="egovPage"></div>
+      <div class="egov-page"></div>
       <div class="egov-page-mask" ref="egovPageMask"></div>
     </div>
   </main>
@@ -145,11 +157,52 @@ understanding
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
 }
 
-.understanding-text {
+.understanding-content {
   position: absolute;
-  top: 30%;
-  left: 10%;
-  color: var(--gs-white);
+  top: 0;
+  width: 100vw;
+  height: 60rem;
+  background: url('@/assets/images/understanding-content.png') center center no-repeat;
+}
+
+/**
+egov intro
+*/
+.egov-intro-wrapper {
+  position: relative;
+  height: 30rem;
+  width: 100vw;
+}
+
+.egov-intro-blur {
+  position: absolute;
+  height: 22.5rem;
+  width: calc(100vw - 8rem);
+  margin: 0 4rem 2rem 4rem;
+  background: var(--gs-white);
+  opacity: 0.6;
+  filter: blur(2px);
+  border: 0.5rem solid transparent;
+  box-sizing: content-box;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.egov-intro-text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  left: 50%;
+  width: 80vw;
+  transform: translateX(-50%);
+  height: 25rem;
+}
+
+.egov-intro-text h1 {
+  font-size: 3rem;
+  white-space: nowrap;
+  color: var(--gs-primary);
 }
 
 /**
