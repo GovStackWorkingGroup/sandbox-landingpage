@@ -8,8 +8,8 @@ import TheAppHeader from '@/components/TheAppHeader.vue'
   <RouterView class="router-view" />
 </template>
 
-<style scoped>
+<!-- <style scoped>
 .router-view {
   padding-top: var(--gs-app-header-height);
 }
-</style>
+</style> -->
