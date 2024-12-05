@@ -59,7 +59,7 @@ onMounted(() => {
       </div>
     </div>
 
-    <!-- egov -->
+    <!-- egov page -->
     <div class="egov-wrapper">
       <div class="egov-page"></div>
       <div class="egov-page-mask" ref="egovPageMask"></div>
@@ -168,6 +168,7 @@ understanding
 /**
 egov intro
 */
+
 .egov-intro-wrapper {
   position: relative;
   height: 30rem;
@@ -206,7 +207,7 @@ egov intro
 }
 
 /**
-egov
+egov page
 */
 
 .egov-wrapper {
@@ -223,7 +224,9 @@ egov
   transform: translateX(-50%);
   height: 2200px;
   background: url('@/assets/images/gs-demo-1200.png') center top no-repeat;
-  border: 1px solid var(--gs-gray);
+  border: 0.5rem solid var(--gs-gray);
+  border-radius: 1rem;
+  box-sizing: content-box;
 }
 
 .egov-page-mask {
