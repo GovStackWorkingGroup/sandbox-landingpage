@@ -8,7 +8,7 @@ const emit = defineEmits<{
 
 const router = useRouter()
 const goHome = () => {
-  emit('scroll', 'hero-wrapper')
+  emit('scroll', 'enter-sandbox-wrapper')
   router.push({ name: 'home' })
 }
 </script>
