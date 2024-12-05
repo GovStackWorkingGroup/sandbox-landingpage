@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { mdiInformationOutline } from '@mdi/js'
 
 const egovPageMask = ref()
-
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -16,6 +15,25 @@ onMounted(() => {
   })
 
   observer.observe(egovPageMask.value)
+})
+
+const buildingBlocksTexts = [
+  { text: 'building blocks', color: 'var(--gs-primary)' },
+  { text: 'designs', color: 'var(--gs-primary)' },
+  { text: 'methodologies', color: 'var(--gs-green)' },
+]
+const intervalId = ref()
+const currentIndex = ref(0)
+const currentText = ref('building blocks')
+const currentColor = ref('')
+intervalId.value = setInterval(() => {
+  currentIndex.value = (currentIndex.value + 1) % buildingBlocksTexts.length
+  currentText.value = buildingBlocksTexts[currentIndex.value].text
+  currentColor.value = buildingBlocksTexts[currentIndex.value].color
+}, 2000)
+
+onUnmounted(() => {
+  clearInterval(intervalId.value)
 })
 
 const buildingBlocksElements = ref()
@@ -114,7 +132,22 @@ const changeBuildingsBlocks = (area: string) => {
           <v-icon :icon="mdiInformationOutline" size="32"></v-icon>
         </div>
         <div class="building-blocks-elements" ref="buildingBlocksElements"></div>
-        <div class="building-blocks-description"></div>
+        <div class="building-blocks-description">
+          <p>
+            Reusing same
+            <span
+              class="building-blocks-description-random-text"
+              :style="{ color: currentColor }"
+              >{{ currentText }}</span
+            >
+          </p>
+          <p>
+            across all
+            <span class="building-blocks-description-where"
+              >services, departments and organizations.</span
+            >
+          </p>
+        </div>
       </div>
     </div>
   </main>
@@ -332,8 +365,8 @@ building blocks
 .building-blocks-blur {
   position: absolute;
   height: 36rem;
-  width: calc(100vw - 8rem);
-  margin: 0 4rem 2rem 4rem;
+  width: calc(100vw - 14rem);
+  margin: 0 7rem 2rem 7rem;
   background: var(--gs-white);
   opacity: 0.6;
   filter: blur(2px);
@@ -394,6 +427,7 @@ building blocks
   width: 400px;
   background: var(--gs-white) url('@/assets/images/building-blocks-hover-areas-right-hover.png')
     16px 0 no-repeat;
+  cursor: pointer;
 }
 
 /* builing block headline */
@@ -432,5 +466,38 @@ building blocks
 
 .building-blocks-elements-right {
   background: url('@/assets/images/building-blocks-elements-right.png') bottom center no-repeat;
+}
+
+/* builing block description */
+
+.building-blocks-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  top: 28rem;
+  font-size: 1.75rem;
+  color: var(--gs-primary);
+}
+
+.building-blocks-description-random-text {
+  color: var(--gs-green);
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.building-blocks-description-random-text {
+  color: var(--gs-green);
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.building-blocks-description-where {
+  color: var(--gs-primary);
+  font-weight: bold;
+  font-style: italic;
 }
 </style>
