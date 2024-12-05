@@ -67,6 +67,7 @@ const changeBuildingsBlocks = (area: string) => {
     <div class="enter-sandbox-wrapper">
       <div class="enter-sandbox-bg-bottom-right"></div>
       <div class="enter-sandbox-blur"></div>
+      <div class="enter-sandbox-image"></div>
       <div class="enter-sandbox-intro-text">
         <h1>Enter the</h1>
         <i class="logo-sandbox"></i>
@@ -212,6 +213,14 @@ hero
   background: url('@/assets/images/enter-sandbox-bg-bottom-right.png') right bottom -1px no-repeat;
 }
 
+.enter-sandbox-image {
+  position: absolute;
+  right: 2rem;
+  height: 60rem;
+  width: 60rem;
+  background: url('@/assets/images/enter-sandbox-image.png') center center no-repeat;
+}
+
 /**
 understanding
 */
@@ -331,7 +340,7 @@ egov page
 .egov-page-mask.change {
   transform: translateX(-50%) scale(1.05);
 }
-/* 
+/*
 @media screen and (max-width: 1399px) {
   .egov-page {
     width: 900px;
