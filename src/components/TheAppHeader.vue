@@ -2,14 +2,19 @@
 import { useRouter } from 'vue-router'
 import { mdiOpenInNew } from '@mdi/js'
 
+const emit = defineEmits<{
+  scroll: [value: string]
+}>()
+
 const router = useRouter()
 const goHome = () => {
+  emit('scroll', 'hero-wrapper')
   router.push({ name: 'home' })
 }
 </script>
 
 <template>
-  <header>
+  <header class="app-header">
     <!-- logo -->
     <div class="logo-wrapper" @click="goHome">
       <i class="logo-gs" color="gs-primary"></i>
@@ -17,9 +22,9 @@ const goHome = () => {
 
     <!-- nav links -->
     <div class="nav-links">
-      <v-btn variant="text">Overview</v-btn>
-      <v-btn variant="text">Demos</v-btn>
-      <v-btn variant="text">Contact</v-btn>
+      <v-btn variant="text" @click="emit('scroll', 'understanding-wrapper')">Overview</v-btn>
+      <v-btn variant="text" @click="emit('scroll', 'demo-wrapper')">Demos</v-btn>
+      <v-btn variant="text" @click="emit('scroll', 'contact-wrapper')">Contact</v-btn>
     </div>
 
     <!-- menu -->
