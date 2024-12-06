@@ -70,8 +70,8 @@ header {
   height: var(--gs-app-header-height);
   padding: 0 2.5rem 0 3.5rem;
   color: var(--gs-black);
-  /* background: var(--gs-surface-light); */
-  z-index: 9999;
+  background: var(--gs-surface-light);
+  z-index: 1000;
 }
 
 .logo-wrapper:hover {
