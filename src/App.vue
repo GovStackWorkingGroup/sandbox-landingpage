@@ -10,3 +10,9 @@ const { scrollIntoView } = useUI()
   <TheAppHeader @scroll="(target) => scrollIntoView(target)" />
   <RouterView class="router-view" />
 </template>
+
+<style scoped>
+.router-view {
+  padding-top: 2rem;
+}
+</style>

@@ -23,7 +23,7 @@ const goHome = () => {
     <!-- nav links -->
     <div class="nav-links">
       <v-btn variant="text" @click="emit('scroll', 'understanding-wrapper')">Overview</v-btn>
-      <v-btn variant="text" @click="emit('scroll', 'demo-wrapper')">Demos</v-btn>
+      <v-btn variant="text" @click="emit('scroll', 'access-demos-wrapper')">Demos</v-btn>
       <v-btn variant="text" @click="emit('scroll', 'contact-wrapper')">Contact</v-btn>
     </div>
 
