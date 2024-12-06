@@ -6,12 +6,15 @@
     <div class="access-demos-content">
       <h1>Access Demos</h1>
       <div class="access-demos-content-row">
-        <section class="early-warning"></section>
-        <section class="cash-transfer"></section>
+        <section class="early-warning" @click="$router.push({ name: 'earlyWarning' })"></section>
+        <section class="cash-transfer" @click="$router.push({ name: 'cashTransfer' })"></section>
       </div>
       <div class="access-demos-content-row">
-        <section class="construction-permit"></section>
-        <section class="high-school"></section>
+        <section
+          class="construction-permit"
+          @click="$router.push({ name: 'constructionPermit' })"
+        ></section>
+        <section class="high-school" @click="$router.push({ name: 'highSchool' })"></section>
       </div>
     </div>
   </div>

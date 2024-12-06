@@ -164,7 +164,6 @@ building blocks
   height: 35rem;
   width: 100vw;
   bottom: 0;
-  /* transform: scale(1.05); */
 }
 
 .building-blocks-bg-bottom-right {
@@ -176,8 +175,9 @@ building blocks
 
 .building-blocks-blur {
   position: absolute;
-  width: calc(100vw - 8rem);
-  margin: 0 3.5rem 2rem 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100vw - 7rem);
   height: 33rem;
   box-shadow: 0px 0px 20px rgba(0, 48, 135, 0.25);
   backdrop-filter: blur(34.8px);
