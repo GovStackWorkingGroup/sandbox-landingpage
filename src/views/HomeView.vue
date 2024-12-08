@@ -25,7 +25,11 @@ import BaseSection from '@/components/BaseSection.vue'
     </BaseSection>
 
     <!-- understanding gov stack -->
-    <BaseSection rightTopImage="understanding-bg-top-right" blurColor="dark">
+    <BaseSection
+      rightTopImage="understanding-bg-top-right"
+      leftBottomImage="understanding-bg-bottom-left"
+      blurColor="dark"
+    >
       <div class="understanding-wrapper">
         <div class="understanding-content"></div>
       </div>
