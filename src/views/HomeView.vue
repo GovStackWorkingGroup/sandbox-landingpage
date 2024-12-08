@@ -36,22 +36,27 @@ import BaseSection from '@/components/BaseSection.vue'
     </BaseSection>
 
     <!-- egov intro-->
-    <div class="egov-intro-wrapper">
-      <div class="egov-intro-blur"></div>
-      <div class="egov-intro-text">
-        <h1>
-          Ever Wonder How to Build <br />
-          Digital Government <br />
-          Services?
-        </h1>
-        <p>
-          Step into our Sandbox to explore how modern e-government <br />
-          solutions are created using reusable components, <br />
-          proven patterns, and scalable architecture.
-        </p>
+    <BaseSection>
+      <div class="egov-intro-wrapper">
+        <div class="egov-intro-text">
+          <h1>
+            Ever Wonder How to Build <br />
+            Digital Government <br />
+            Services?
+          </h1>
+          <p>
+            Step into our Sandbox to explore how modern e-government <br />
+            solutions are created using reusable components, <br />
+            proven patterns, and scalable architecture.
+          </p>
+        </div>
       </div>
-    </div>
+    </BaseSection>
+
+    <!-- building blocks-->
     <TheBuildingBlocks />
+
+    <!-- access demos-->
     <TheAccessDemos />
   </main>
 </template>
@@ -96,12 +101,6 @@ hero
 understanding
 */
 
-.understanding-wrapper {
-  /* position: relative;
-  height: 60rem;
-  width: 100vw; */
-}
-
 .understanding-content {
   width: 1200px;
   height: 592px;
@@ -112,36 +111,11 @@ understanding
 egov intro
 */
 
-.egov-intro-wrapper {
-  position: relative;
-  height: 30rem;
-  width: 100vw;
-}
-
-.egov-intro-blur {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100vw - 8rem);
-  height: 25rem;
-  box-shadow: 0px 0px 20px rgba(0, 48, 135, 0.25);
-  backdrop-filter: blur(34.8px);
-  background: rgba(255, 255, 255, 0.6);
-  border: 0.5rem solid transparent;
-  box-sizing: content-box;
-  border-radius: 1rem;
-}
-
 .egov-intro-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
+  max-width: 1200px;
   justify-content: space-around;
-  width: 80vw;
 }
 
 .egov-intro-text h1 {
