@@ -1,32 +1,35 @@
 <script setup lang="ts">
 import TheBuildingBlocks from '@/components/TheBuildingBlocks.vue'
 import TheAccessDemos from '@/components/TheAccessDemos.vue'
+import BaseSection from '@/components/BaseSection.vue'
 </script>
 
 <template>
   <main>
     <!-- hero -->
-    <div class="enter-sandbox-wrapper">
-      <div class="enter-sandbox-bg-bottom-right"></div>
-      <div class="enter-sandbox-blur"></div>
-      <div class="enter-sandbox-image"></div>
-      <div class="enter-sandbox-intro-text">
-        <h1>Enter the</h1>
-        <i class="logo-sandbox"></i>
-        <p>
-          The GovStack Sandbox is a demonstration environment for teams from <br />
-          governments and service providers to learn and test how to practically <br />
-          apply the GovStack approach.
-        </p>
+    <BaseSection rightBottomImage="enter-sandbox-bg-bottom-right">
+      <div class="enter-sandbox-wrapper">
+        <!-- text -->
+        <div class="enter-sandbox-intro-text">
+          <h1>Enter the</h1>
+          <i class="logo-sandbox"></i>
+          <p>
+            The GovStack Sandbox is a demonstration environment for teams from governments and
+            service providers to learn and test how to practically apply the GovStack approach.
+          </p>
+        </div>
+
+        <!-- image -->
+        <div class="enter-sandbox-image"></div>
       </div>
-    </div>
+    </BaseSection>
 
     <!-- understanding gov stack -->
-    <div class="understanding-wrapper">
-      <div class="understanding-bg-top-right"></div>
-      <div class="understanding-blur"></div>
-      <div class="understanding-content"></div>
-    </div>
+    <BaseSection rightTopImage="understanding-bg-top-right" blurColor="dark">
+      <div class="understanding-wrapper">
+        <div class="understanding-content"></div>
+      </div>
+    </BaseSection>
 
     <!-- egov intro-->
     <div class="egov-intro-wrapper">
@@ -54,7 +57,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
 }
 
 /**
@@ -62,16 +64,8 @@ hero
 */
 
 .enter-sandbox-wrapper {
-  position: relative;
-  height: 60rem;
-  width: 100vw;
-}
-
-.enter-sandbox-intro-text {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  width: 50%;
+  display: flex;
+  align-items: center;
 }
 
 .enter-sandbox-intro-text h1 {
@@ -87,33 +81,10 @@ hero
   left: -1rem;
 }
 
-.enter-sandbox-blur {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100vw - 8rem);
-  height: 55rem;
-  box-shadow: 0px 0px 20px rgba(0, 48, 135, 0.25);
-  backdrop-filter: blur(34.8px);
-  background: rgba(255, 255, 255, 0.6);
-  border: 0.5rem solid transparent;
-  box-sizing: content-box;
-  border-radius: 1rem;
-}
-
-.enter-sandbox-bg-bottom-right {
-  position: absolute;
-  width: 100vw;
-  height: 60rem;
-  background: url('@/assets/images/enter-sandbox-bg-bottom-right.png') right bottom -1px no-repeat;
-}
-
 .enter-sandbox-image {
-  position: absolute;
-  right: 2rem;
-  height: 60rem;
-  width: 60rem;
+  right: 0;
+  min-height: 564px;
+  min-width: 736px;
   background: url('@/assets/images/enter-sandbox-image.png') center center no-repeat;
 }
 
@@ -122,39 +93,14 @@ understanding
 */
 
 .understanding-wrapper {
-  position: relative;
+  /* position: relative;
   height: 60rem;
-  width: 100vw;
-}
-
-.understanding-bg-top-right {
-  position: absolute;
-  width: 100vw;
-  height: 60rem;
-  background: url('@/assets/images/understanding-bg-top-right.png') right top no-repeat;
-}
-
-.understanding-blur {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100vw - 8rem);
-  height: 55rem;
-  border-radius: 16px;
-  background: rgba(0, 11, 48, 0.8);
-  box-shadow: 0px 0px 20px 0px rgba(0, 48, 135, 0.25);
-  backdrop-filter: blur(18px);
-  border: 0.5rem solid transparent;
-  border-radius: 1rem;
-  box-sizing: content-box;
+  width: 100vw; */
 }
 
 .understanding-content {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 60rem;
+  width: 1200px;
+  height: 592px;
   background: url('@/assets/images/understanding-content.png') center center no-repeat;
 }
 

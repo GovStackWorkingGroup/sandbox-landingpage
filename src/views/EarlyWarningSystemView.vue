@@ -172,7 +172,17 @@ const goBack = () => {
   margin-left: 3rem;
 }
 .early-warning-page-wrapper {
-  width: 100vw;
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+  padding: 4rem;
+  margin: 2rem 4rem 2rem 4rem;
+  box-shadow: 0px 0px 20px rgba(0, 48, 135, 0.25);
+  backdrop-filter: blur(34.8px);
+  background: rgba(255, 255, 255, 0.6);
+  border: 0.5rem solid transparent;
+  /* box-sizing: content-box; */
+  border-radius: 1rem;
 }
 
 .early-warning-page-bg-center-right {
@@ -182,14 +192,7 @@ const goBack = () => {
 }
 
 .early-warning-page-content {
-  padding: 4rem;
-  margin: 2rem 4rem 2rem 4rem;
-  box-shadow: 0px 0px 20px rgba(0, 48, 135, 0.25);
-  backdrop-filter: blur(34.8px);
-  background: rgba(255, 255, 255, 0.6);
-  border: 0.5rem solid transparent;
-  box-sizing: content-box;
-  border-radius: 1rem;
+  max-width: 1200px;
 }
 
 .early-warning-page-content h1 {
