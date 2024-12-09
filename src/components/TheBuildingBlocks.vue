@@ -153,7 +153,7 @@ building blocks
   position: absolute;
   height: 35rem;
   width: 100vw;
-  bottom: 2px;
+  bottom: 0;
   transform: scale(0.8);
   transition: transform 0.5s ease-out;
 }
