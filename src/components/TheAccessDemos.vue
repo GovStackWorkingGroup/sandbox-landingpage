@@ -37,12 +37,32 @@ import BaseSection from '@/components/BaseSection.vue'
   font-size: 3rem;
   white-space: nowrap;
   color: var(--gs-primary);
+  width: 100%;
 }
 
 .access-demos-content-row {
   display: flex;
   justify-content: space-between;
   margin: 2rem 0 2rem 0;
+}
+
+@media (width < 1500px) {
+  .access-demos-content {
+    align-items: center;
+    width: 100%;
+  }
+
+  .access-demos-content-row {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 602px;
+  }
+
+  .access-demos-content-row section {
+    margin: 2rem 0;
+  }
 }
 
 .early-warning {

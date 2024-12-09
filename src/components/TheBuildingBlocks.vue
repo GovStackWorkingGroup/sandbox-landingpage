@@ -177,14 +177,13 @@ building blocks
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100vw - 7rem);
+  width: calc(100vw - 8rem);
   height: 33rem;
-  box-shadow: 0px 0px 20px rgba(0, 48, 135, 0.25);
-  backdrop-filter: blur(34.8px);
   background: rgba(255, 255, 255, 0.6);
-  box-sizing: content-box;
+  border: 0.5rem solid transparent;
   border-radius: 1rem;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 1.5rem rgba(0, 48, 135, 0.25);
+  backdrop-filter: blur(2rem);
 }
 
 @media screen and (max-width: 1410px) {

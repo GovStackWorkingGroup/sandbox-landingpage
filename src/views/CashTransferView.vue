@@ -35,7 +35,7 @@ button {
 .cash-transfer-page-bg-center-right {
   position: absolute;
   width: 100vw;
-  background: url('@/assets/images/access-demos-bg-top-right.png') right center no-repeat;
+  background: url('/public/access-demos-bg-top-right.png') right center no-repeat;
 }
 
 .cash-transfer-page-blur {

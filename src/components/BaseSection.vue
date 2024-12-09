@@ -27,10 +27,10 @@ const props = defineProps({
 const bgStyle = computed(() => {
   return `     
     background: 
-        url('/src/assets/images/${props.rightTopImage}.png') right top no-repeat,
-        url('/src/assets/images/${props.rightBottomImage}.png') right bottom no-repeat,
-        url('/src/assets/images/${props.leftTopImage}.png') left top no-repeat,
-        url('/src/assets/images/${props.leftBottomImage}.png') left bottom no-repeat;
+        url('/${props.rightTopImage}.png') right top no-repeat,
+        url('/${props.rightBottomImage}.png') right bottom no-repeat,
+        url('/${props.leftTopImage}.png') left top no-repeat,
+        url('/${props.leftBottomImage}.png') left bottom no-repeat;
     `
 })
 </script>

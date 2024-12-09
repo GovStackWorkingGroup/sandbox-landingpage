@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import {
   mdiChevronLeft,
   mdiCheck,
@@ -9,7 +11,10 @@ import {
   mdiAccountVoice,
   mdiBookOpenBlankVariant,
 } from '@mdi/js'
-import { useRouter } from 'vue-router'
+
+onMounted(() => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+})
 
 const router = useRouter()
 
@@ -188,7 +193,7 @@ const goBack = () => {
 .early-warning-page-bg-center-right {
   position: absolute;
   width: 100vw;
-  background: url('@/assets/images/access-demos-bg-top-right.png') right center no-repeat;
+  background: url('/public/access-demos-bg-top-right.png') right center no-repeat;
 }
 
 .early-warning-page-content {

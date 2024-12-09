@@ -35,13 +35,13 @@ const menuItems = [
         @click="emit('scroll', 'understanding-wrapper')"
         >Overview</v-btn
       >
-      <v-menu>
+      <v-menu v-if="$route.name == 'home'">
         <template v-slot:activator="{ props }">
           <v-btn :append-icon="mdiChevronDown" v-bind="props" variant="text"> Demos </v-btn>
         </template>
         <v-list>
           <v-list-item v-for="(item, index) in menuItems" :key="index" :value="index">
-            <v-list-item-title @click="emit('scroll', 'access-demos-wrapper')">{{
+            <v-list-item-title @click="$router.push({ name: item.route })">{{
               item.title
             }}</v-list-item-title>
           </v-list-item>
