@@ -5,6 +5,7 @@ import TheEgovIntro from '@/components/TheEgovIntro.vue'
 import TheBuildingBlocks from '@/components/TheBuildingBlocks.vue'
 import TheAccessDemos from '@/components/TheAccessDemos.vue'
 import TheWantToLearnMore from '@/components/TheWantToLearnMore.vue'
+import TheWantToBecomePartner from '@/components/TheWantToBecomePartner.vue'
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import TheWantToLearnMore from '@/components/TheWantToLearnMore.vue'
     <TheBuildingBlocks />
     <TheAccessDemos />
     <TheWantToLearnMore />
+    <TheWantToBecomePartner />
   </main>
 </template>
 
