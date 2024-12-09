@@ -53,3 +53,15 @@
   width: 2rem;
   height: 2rem;
 }
+
+.icon-linkedin {
+  background: url('@/assets/images/logo-linkedin.svg') center center / 2rem no-repeat;
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon-status-cube-active {
+  background: url('@/assets/images/icon-status-cube-active.svg') center center / 1rem no-repeat;
+  width: 1rem;
+  height: 1rem;
+}
