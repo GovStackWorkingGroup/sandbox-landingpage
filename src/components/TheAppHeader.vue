@@ -37,7 +37,14 @@ const menuItems = [
       >
       <v-menu v-if="$route.name == 'home'">
         <template v-slot:activator="{ props }">
-          <v-btn :append-icon="mdiChevronDown" v-bind="props" variant="text"> Demos </v-btn>
+          <v-btn
+            :append-icon="mdiChevronDown"
+            v-bind="props"
+            variant="text"
+            @click="emit('scroll', 'access-demos-wrapper')"
+          >
+            Demos
+          </v-btn>
         </template>
         <v-list>
           <v-list-item v-for="(item, index) in menuItems" :key="index" :value="index">
