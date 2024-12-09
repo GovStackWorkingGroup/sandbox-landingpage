@@ -2,7 +2,7 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import { mdiInformationOutline } from '@mdi/js'
 
-const egovPageMask = ref()
+const buildingBlocksWrapper = ref()
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -14,7 +14,7 @@ onMounted(() => {
     })
   })
 
-  observer.observe(egovPageMask.value)
+  observer.observe(buildingBlocksWrapper.value)
 })
 
 const buildingBlocksTexts = [
@@ -35,58 +35,48 @@ intervalId.value = setInterval(() => {
 onUnmounted(() => {
   clearInterval(intervalId.value)
 })
-
-const buildingBlocksElements = ref()
-const changeBuildingsBlocks = (area: string) => {
-  if (area == 'left') {
-    buildingBlocksElements.value.classList.remove('building-blocks-elements-center')
-    buildingBlocksElements.value.classList.remove('building-blocks-elements-right')
-    buildingBlocksElements.value.classList.add('building-blocks-elements-left')
-  }
-  if (area == 'center') {
-    buildingBlocksElements.value.classList.remove('building-blocks-elements-left')
-    buildingBlocksElements.value.classList.remove('building-blocks-elements-right')
-    buildingBlocksElements.value.classList.add('building-blocks-elements-center')
-  }
-  if (area == 'right') {
-    buildingBlocksElements.value.classList.remove('building-blocks-elements-left')
-    buildingBlocksElements.value.classList.remove('building-blocks-elements-center')
-    buildingBlocksElements.value.classList.add('building-blocks-elements-right')
-  }
-  if (area == 'clear') {
-    buildingBlocksElements.value.classList.remove('building-blocks-elements-left')
-    buildingBlocksElements.value.classList.remove('building-blocks-elements-center')
-    buildingBlocksElements.value.classList.remove('building-blocks-elements-right')
-  }
-}
 </script>
 
 <template>
   <!-- egov page -->
   <div class="egov-wrapper">
     <div class="egov-page"></div>
-    <div class="egov-page-mask" ref="egovPageMask"></div>
     <!-- building blocks -->
-    <div class="building-blocks-wrapper">
+    <div class="building-blocks-wrapper" ref="buildingBlocksWrapper">
       <div class="building-blocks-bg-bottom-right"></div>
       <div class="building-blocks-blur"></div>
       <div class="building-blocks-hover-areas">
-        <div
-          class="building-blocks-hover-areas-left"
-          @mouseover="changeBuildingsBlocks('left')"
-          @mouseout="changeBuildingsBlocks('clear')"
-        ></div>
-        <div
-          class="building-blocks-hover-areas-center"
-          @mouseover="changeBuildingsBlocks('center')"
-          @mouseout="changeBuildingsBlocks('clear')"
-        ></div>
-        <div
-          class="building-blocks-hover-areas-right"
-          @mouseover="changeBuildingsBlocks('right')"
-          @mouseout="changeBuildingsBlocks('clear')"
-        ></div>
+        <!-- left -->
+        <div class="building-blocks-hover-areas-left">
+          <div class="building-blocks-hover-areas-frame">
+            <p>Methodology demo showcasing the usage of service design templates.</p>
+            <div>
+              <v-btn color="gs-primary" class="learn-more" variant="outlined">Learn more</v-btn>
+            </div>
+          </div>
+        </div>
+
+        <!-- center -->
+        <div class="building-blocks-hover-areas-center">
+          <div class="building-blocks-hover-areas-frame">
+            <p>Methodology demo showcasing the usage of service design templates.</p>
+            <div>
+              <v-btn color="gs-primary" class="learn-more" variant="outlined">Learn more</v-btn>
+            </div>
+          </div>
+        </div>
+
+        <!-- right -->
+        <div class="building-blocks-hover-areas-right">
+          <div class="building-blocks-hover-areas-frame">
+            <p>Methodology demo showcasing the usage of service design templates.</p>
+            <div>
+              <v-btn color="gs-primary" class="learn-more" variant="outlined">Learn more</v-btn>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="building-blocks-headline">
         <p>Building Blocks</p>
         <v-icon :icon="mdiInformationOutline" size="32"></v-icon>
@@ -137,24 +127,6 @@ egov page
   box-sizing: content-box;
 }
 
-.egov-page-mask {
-  position: absolute;
-  left: 50%;
-  top: 1640px;
-  transform: translateX(-50%) scale(0.9);
-  transition: transform 0.5s ease-out;
-  width: 1200px;
-  height: 580px;
-  background: url('@/assets/images/gs-demo-1200.png') center bottom no-repeat;
-  border: 0.5rem solid var(--gs-gray);
-  box-sizing: content-box;
-  border-radius: 1rem;
-}
-
-.egov-page-mask.change {
-  transform: translateX(-50%) scale(1);
-}
-
 /**
 building blocks
 */
@@ -163,7 +135,13 @@ building blocks
   position: absolute;
   height: 35rem;
   width: 100vw;
-  bottom: 0;
+  bottom: 2px;
+  transform: scale(0.8);
+  transition: transform 0.5s ease-out;
+}
+
+.building-blocks-wrapper.change {
+  transform: scale(1);
 }
 
 .building-blocks-bg-bottom-right {
@@ -204,41 +182,49 @@ building blocks
   transform: translateX(-50%);
 }
 
-.building-blocks-hover-areas-left {
-  height: 120px;
-  width: 400px;
-  background: url('@/assets/images/building-blocks-hover-areas-left.png') 19.5px 0 no-repeat;
-}
-
-.building-blocks-hover-areas-left:hover {
-  background: url('@/assets/images/building-blocks-hover-areas-left-hover.png') 19.5px 0 no-repeat;
-  cursor: pointer;
-}
-
-.building-blocks-hover-areas-center {
-  height: 120px;
-  width: 400px;
-  background: url('@/assets/images/building-blocks-hover-areas-center.png') 19px 0 no-repeat;
-}
-
-.building-blocks-hover-areas-center:hover {
-  height: 120px;
-  width: 400px;
-  background: url('@/assets/images/building-blocks-hover-areas-center-hover.png') 19px 0 no-repeat;
-  cursor: pointer;
-}
-
+.building-blocks-hover-areas-left,
+.building-blocks-hover-areas-center,
 .building-blocks-hover-areas-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 120px;
   width: 400px;
-  background: url('@/assets/images/building-blocks-hover-areas-right.png') 16px 0 no-repeat;
 }
 
-.building-blocks-hover-areas-right:hover {
-  height: 120px;
-  width: 400px;
-  background: url('@/assets/images/building-blocks-hover-areas-right-hover.png') 16px 0 no-repeat;
-  cursor: pointer;
+.building-blocks-hover-areas-frame {
+  position: relative;
+  width: 362px;
+  margin-left: 3px;
+  padding: 1rem;
+  border: 1px solid var(--gs-primary);
+  border-radius: 1rem;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.building-blocks-hover-areas-center .building-blocks-hover-areas-frame {
+  margin-left: 1px;
+}
+
+.building-blocks-hover-areas-right .building-blocks-hover-areas-frame {
+  margin-left: -3px;
+}
+
+.building-blocks-hover-areas-frame div {
+  text-align: right;
+  padding: 0.5rem 0;
+}
+
+.building-blocks-hover-areas-frame p {
+  color: var(--gs-primary);
+  font-family: monospace;
+}
+
+.building-blocks-hover-areas-frame .v-btn:hover {
+  background: var(--gs-green) !important;
+  color: var(--gs-primary) !important;
 }
 
 /* builing block headline */
@@ -295,13 +281,6 @@ building blocks
 }
 
 .building-blocks-description-random-text {
-  color: var(--gs-green);
-  font-weight: bold;
-  font-family: monospace;
-}
-
-.building-blocks-description-random-text {
-  color: var(--gs-green);
   font-weight: bold;
   font-family: monospace;
 }
