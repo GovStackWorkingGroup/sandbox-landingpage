@@ -11,3 +11,45 @@
   padding: 1.5rem 6rem;
   background: var(--gs-primary);
 }
+
+.logo-bmz {
+  background: url('@/assets/images/logo-bmz.svg') center center / 16rem no-repeat;
+  width: 16rem;
+  height: 8rem;
+}
+
+.logo-dia {
+  background: url('@/assets/images/logo-dia.svg') center center / 16rem no-repeat;
+  width: 16rem;
+  height: 8rem;
+}
+
+.logo-giz {
+  background: url('@/assets/images/logo-giz.svg') center center / 16rem no-repeat;
+  width: 16rem;
+  height: 8rem;
+}
+
+.logo-itu {
+  background: url('@/assets/images/logo-itu.svg') center center / 6rem no-repeat;
+  width: 16rem;
+  height: 8rem;
+}
+
+.logo-roe {
+  background: url('@/assets/images/logo-estonia.svg') center center / 16rem no-repeat;
+  width: 16rem;
+  height: 8rem;
+}
+
+.logo-x {
+  background: url('@/assets/images/logo-x.svg') center center / 2rem no-repeat;
+  width: 2rem;
+  height: 2rem;
+}
+
+.logo-linkedin {
+  background: url('@/assets/images/logo-linkedin.svg') center center / 2rem no-repeat;
+  width: 2rem;
+  height: 2rem;
+}

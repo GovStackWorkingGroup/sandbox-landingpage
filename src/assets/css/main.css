@@ -10,3 +10,13 @@
 .app-header .nav-links span {
   font-weight: 600;
 }
+
+.app-footer a {
+  color: var(--gs-white);
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  color: var(--gs-white);
+  text-decoration: underline;
+}
