@@ -41,7 +41,7 @@ const menuItems = [
         </template>
         <v-list>
           <v-list-item v-for="(item, index) in menuItems" :key="index" :value="index">
-            <v-list-item-title @click="$router.push({ name: item.route })">{{
+            <v-list-item-title @click="emit('scroll', 'access-demos-wrapper')">{{
               item.title
             }}</v-list-item-title>
           </v-list-item>
@@ -66,9 +66,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   height: var(--gs-app-header-height);
-  padding: 0 2.5rem 0 3.5rem;
+  padding: 0 4.5rem 0 3.5rem;
   color: var(--gs-black);
   background: var(--gs-surface-light);
   z-index: 1000;
@@ -76,5 +76,9 @@ header {
 
 .logo-wrapper:hover {
   cursor: pointer;
+}
+
+.nav-links > * {
+  margin: 0 2rem;
 }
 </style>

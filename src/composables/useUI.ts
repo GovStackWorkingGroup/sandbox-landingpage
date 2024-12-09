@@ -1,5 +1,5 @@
 export const useUI = () => {
-  const scrollIntoView = (className: string, yOffset = 120) => {
+  const scrollIntoView = (className: string, yOffset = 190) => {
     const target = document.querySelector(`.${className}`)
     if (target) {
       const yPosition = target.getBoundingClientRect().top + window.scrollY

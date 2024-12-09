@@ -1,60 +1,36 @@
+<script setup lang="ts">
+import BaseSection from '@/components/BaseSection.vue'
+</script>
+
 <template>
-  <!-- access demos -->
-  <div class="access-demos-wrapper">
-    <div class="access-demos-bg-top-right"></div>
-    <div class="access-demos-blur"></div>
-    <div class="access-demos-content">
-      <h1>Access Demos</h1>
-      <div class="access-demos-content-row">
-        <section class="early-warning" @click="$router.push({ name: 'earlyWarning' })"></section>
-        <section class="cash-transfer" @click="$router.push({ name: 'cashTransfer' })"></section>
-      </div>
-      <div class="access-demos-content-row">
-        <section
-          class="construction-permit"
-          @click="$router.push({ name: 'constructionPermit' })"
-        ></section>
-        <section class="high-school" @click="$router.push({ name: 'highSchool' })"></section>
+  <BaseSection
+    rightTopImage="access-demos-bg-top-right"
+    leftBottomImage="access-demos-bg-bottom-left"
+  >
+    <div class="access-demos-wrapper">
+      <div class="access-demos-content">
+        <h1>Access Demos</h1>
+        <div class="access-demos-content-row">
+          <section class="early-warning" @click="$router.push({ name: 'earlyWarning' })"></section>
+          <section class="cash-transfer" @click="$router.push({ name: 'cashTransfer' })"></section>
+        </div>
+        <div class="access-demos-content-row">
+          <section
+            class="construction-permit"
+            @click="$router.push({ name: 'constructionPermit' })"
+          ></section>
+          <section class="high-school" @click="$router.push({ name: 'highSchool' })"></section>
+        </div>
       </div>
     </div>
-  </div>
+  </BaseSection>
 </template>
 
 <style scoped>
-.access-demos-wrapper {
-  position: relative;
-  height: 60rem;
-  width: 100vw;
-}
-
-.access-demos-bg-top-right {
-  position: absolute;
-  width: 100vw;
-  height: 60rem;
-  background: url('@/assets/images/access-demos-bg-top-right.png') right top no-repeat;
-}
-
-.access-demos-blur {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100vw - 8rem);
-  height: 55rem;
-  box-shadow: 0px 0px 20px rgba(0, 48, 135, 0.25);
-  backdrop-filter: blur(34.8px);
-  background: rgba(255, 255, 255, 0.6);
-  border: 0.5rem solid transparent;
-  box-sizing: content-box;
-  border-radius: 1rem;
-}
-
 .access-demos-content {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 60rem;
-  padding: 4rem 8rem;
+  display: flex;
+  flex-direction: column;
+  width: 1250px;
 }
 
 .access-demos-content h1 {
@@ -66,8 +42,7 @@
 .access-demos-content-row {
   display: flex;
   justify-content: space-between;
-  height: 312px;
-  margin: 2rem 0 4rem 0;
+  margin: 2rem 0 2rem 0;
 }
 
 .early-warning {
