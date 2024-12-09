@@ -35,7 +35,7 @@ const menuItems = [
         @click="emit('scroll', 'understanding-wrapper')"
         >Overview</v-btn
       >
-      <v-menu v-if="$route.name == 'home'">
+      <v-menu>
         <template v-slot:activator="{ props }">
           <v-btn
             :append-icon="mdiChevronDown"
@@ -61,7 +61,13 @@ const menuItems = [
 
     <!-- menu -->
     <div class="menu-wrapper">
-      <v-btn :prepend-icon="mdiOpenInNew" color="gs-green">GOVSTACK.GLOBAL</v-btn>
+      <v-btn
+        :prepend-icon="mdiOpenInNew"
+        color="gs-green"
+        href="https://www.govstack.global/"
+        target="_blank"
+        >GOVSTACK.GLOBAL</v-btn
+      >
     </div>
   </header>
 </template>

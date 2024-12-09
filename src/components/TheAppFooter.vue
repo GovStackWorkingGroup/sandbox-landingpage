@@ -36,7 +36,7 @@
 }
 
 .app-footer .bottom-row {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 1rem;
 }
 
@@ -44,9 +44,5 @@
 .legal-links {
   display: flex;
   gap: 1rem;
-}
-
-.app-footer i:hover {
-  cursor: pointer;
 }
 </style>
