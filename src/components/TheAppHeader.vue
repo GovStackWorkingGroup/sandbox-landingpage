@@ -54,7 +54,7 @@ const menuItems = [
           </v-list-item>
         </v-list>
       </v-menu>
-      <v-btn v-if="$route.name == 'home'" variant="text" @click="emit('scroll', 'contact-wrapper')"
+      <v-btn v-if="$route.name == 'home'" variant="text" @click="emit('scroll', 'app-footer')"
         >Contact</v-btn
       >
     </div>

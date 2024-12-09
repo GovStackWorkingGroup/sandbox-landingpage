@@ -27,11 +27,11 @@ import BaseSection from '@/components/BaseSection.vue'
   align-items: center;
   max-width: 1200px;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .want-to-learn-more-content > * {
   flex: 1;
-  margin: 0 3rem;
 }
 
 .want-to-learn-more-content h1 {
