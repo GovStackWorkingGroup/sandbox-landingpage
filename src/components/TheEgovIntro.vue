@@ -12,9 +12,8 @@ import BaseSection from '@/components/BaseSection.vue'
           Services?
         </h1>
         <p>
-          Step into our Sandbox to explore how modern e-government <br />
-          solutions are created using reusable components, <br />
-          proven patterns, and scalable architecture.
+          Step into our Sandbox to explore how modern e-government solutions are created using
+          reusable components, proven patterns, and scalable architecture.
         </p>
       </div>
     </div>
@@ -26,12 +25,17 @@ import BaseSection from '@/components/BaseSection.vue'
   display: flex;
   align-items: center;
   max-width: 1200px;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 .egov-intro-content h1 {
   font-size: 3rem;
   white-space: nowrap;
   color: var(--gs-primary);
+}
+
+.egov-intro-content p {
+  font-size: 1.5rem;
 }
 </style>
