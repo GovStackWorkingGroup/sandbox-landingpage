@@ -35,6 +35,30 @@ intervalId.value = setInterval(() => {
 onUnmounted(() => {
   clearInterval(intervalId.value)
 })
+
+const buildingBlocksElements = ref()
+const changeBuildingsBlocks = (area: string) => {
+  if (area == 'left') {
+    buildingBlocksElements.value.classList.remove('building-blocks-elements-center')
+    buildingBlocksElements.value.classList.remove('building-blocks-elements-right')
+    buildingBlocksElements.value.classList.add('building-blocks-elements-left')
+  }
+  if (area == 'center') {
+    buildingBlocksElements.value.classList.remove('building-blocks-elements-left')
+    buildingBlocksElements.value.classList.remove('building-blocks-elements-right')
+    buildingBlocksElements.value.classList.add('building-blocks-elements-center')
+  }
+  if (area == 'right') {
+    buildingBlocksElements.value.classList.remove('building-blocks-elements-left')
+    buildingBlocksElements.value.classList.remove('building-blocks-elements-center')
+    buildingBlocksElements.value.classList.add('building-blocks-elements-right')
+  }
+  if (area == 'clear') {
+    buildingBlocksElements.value.classList.remove('building-blocks-elements-left')
+    buildingBlocksElements.value.classList.remove('building-blocks-elements-center')
+    buildingBlocksElements.value.classList.remove('building-blocks-elements-right')
+  }
+}
 </script>
 
 <template>
@@ -47,7 +71,11 @@ onUnmounted(() => {
       <div class="building-blocks-blur"></div>
       <div class="building-blocks-hover-areas">
         <!-- left -->
-        <div class="building-blocks-hover-areas-left">
+        <div
+          class="building-blocks-hover-areas-left"
+          @mouseover="changeBuildingsBlocks('left')"
+          @mouseout="changeBuildingsBlocks('clear')"
+        >
           <div class="building-blocks-hover-areas-frame">
             <p>Methodology demo showcasing the usage of service design templates.</p>
             <div>
@@ -63,7 +91,11 @@ onUnmounted(() => {
         </div>
 
         <!-- center -->
-        <div class="building-blocks-hover-areas-center">
+        <div
+          class="building-blocks-hover-areas-center"
+          @mouseover="changeBuildingsBlocks('center')"
+          @mouseout="changeBuildingsBlocks('clear')"
+        >
           <div class="building-blocks-hover-areas-frame">
             <p>Methodology demo showcasing the usage of service design templates.</p>
             <div>
@@ -79,7 +111,11 @@ onUnmounted(() => {
         </div>
 
         <!-- right -->
-        <div class="building-blocks-hover-areas-right">
+        <div
+          class="building-blocks-hover-areas-right"
+          @mouseover="changeBuildingsBlocks('right')"
+          @mouseout="changeBuildingsBlocks('clear')"
+        >
           <div class="building-blocks-hover-areas-frame">
             <p>Methodology demo showcasing the usage of service design templates.</p>
             <div>
