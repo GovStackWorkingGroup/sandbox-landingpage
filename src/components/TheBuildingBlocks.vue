@@ -51,7 +51,13 @@ onUnmounted(() => {
           <div class="building-blocks-hover-areas-frame">
             <p>Methodology demo showcasing the usage of service design templates.</p>
             <div>
-              <v-btn color="gs-primary" class="learn-more" variant="outlined">Learn more</v-btn>
+              <v-btn
+                color="gs-primary"
+                class="learn-more"
+                variant="outlined"
+                @click="$router.push({ name: 'highSchool' })"
+                >Learn more</v-btn
+              >
             </div>
           </div>
         </div>
@@ -61,7 +67,13 @@ onUnmounted(() => {
           <div class="building-blocks-hover-areas-frame">
             <p>Methodology demo showcasing the usage of service design templates.</p>
             <div>
-              <v-btn color="gs-primary" class="learn-more" variant="outlined">Learn more</v-btn>
+              <v-btn
+                color="gs-primary"
+                class="learn-more"
+                variant="outlined"
+                @click="$router.push({ name: 'constructionPermit' })"
+                >Learn more</v-btn
+              >
             </div>
           </div>
         </div>
@@ -71,7 +83,13 @@ onUnmounted(() => {
           <div class="building-blocks-hover-areas-frame">
             <p>Methodology demo showcasing the usage of service design templates.</p>
             <div>
-              <v-btn color="gs-primary" class="learn-more" variant="outlined">Learn more</v-btn>
+              <v-btn
+                color="gs-primary"
+                class="learn-more"
+                variant="outlined"
+                @click="$router.push({ name: 'cashTransfer' })"
+                >Learn more</v-btn
+              >
             </div>
           </div>
         </div>
