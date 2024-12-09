@@ -42,11 +42,11 @@ const goBack = () => {
             <span class="diamond">⬧</span>
             <span class="demo-type">Tech Demo</span>
           </div>
-          <h1>Construction Permit</h1>
+          <h1>High-School Graduation Certificate</h1>
           <div class="gs-row">
             <p>
               Here you can find demonstration of service and frontend design using an Online
-              Construction Permit Use Case.
+              High-School Graduation Certificate Use Case.
             </p>
             <i class="demo-image" />
           </div>
