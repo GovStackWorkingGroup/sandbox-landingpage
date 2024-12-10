@@ -25,12 +25,12 @@ const props = defineProps({
 })
 
 const bgStyle = computed(() => {
-  return `     
-    background: 
-        url('/${props.rightTopImage}.png') right top no-repeat,
-        url('/${props.rightBottomImage}.png') right bottom no-repeat,
-        url('/${props.leftTopImage}.png') left top no-repeat,
-        url('/${props.leftBottomImage}.png') left bottom no-repeat;
+  return `
+    background:
+        url('/images/${props.rightTopImage}.png') right top no-repeat,
+        url('/images/${props.rightBottomImage}.png') right bottom no-repeat,
+        url('/images/${props.leftTopImage}.png') left top no-repeat,
+        url('/images/${props.leftBottomImage}.png') left bottom no-repeat;
     `
 })
 </script>
@@ -46,6 +46,9 @@ const bgStyle = computed(() => {
 </template>
 
 <style scoped>
+.bgStyle {
+  background: url(bgImage) right bottom no-repeat;
+}
 .wrapper {
   width: 100vw;
   min-height: 8rem;
