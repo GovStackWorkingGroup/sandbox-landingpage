@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BaseSection from '@/components/BaseSection.vue'
+import AccessDemoCard from '@/components/AccessDemoCard.vue'
 </script>
 
 <template>
@@ -11,15 +12,55 @@ import BaseSection from '@/components/BaseSection.vue'
       <div class="access-demos-content">
         <h1>Access Demos</h1>
         <div class="access-demos-content-row">
-          <section class="early-warning" @click="$router.push({ name: 'earlyWarning' })"></section>
-          <section class="cash-transfer" @click="$router.push({ name: 'cashTransfer' })"></section>
+          <AccessDemoCard
+            :usageTypes="['Back-End', 'Front-End', 'UX/UI']"
+            :title="'Early Warning System'"
+            :features="['Information Mediator', 'Digital Registry', 'Messaging']"
+            :description="'Demonstrating Govstack architecture and a-sync data exchange through early warning system use case.'"
+            :route="'earlyWarning'"
+          ></AccessDemoCard>
+          <AccessDemoCard
+            :usageTypes="['Back-End', 'Front-End']"
+            :title="'Social Cash Transfer'"
+            :features="[
+              'Identity',
+              'Payment',
+              'Information Mediator',
+              'Digital Registry',
+              'Consent',
+            ]"
+            :description="'Demonstrating Govstack architecture  and all stack layers through a Unconditional Social Cash Transfer (USCT) use case.'"
+            :route="'cashTransfer'"
+          ></AccessDemoCard>
         </div>
         <div class="access-demos-content-row">
-          <section
-            class="construction-permit"
-            @click="$router.push({ name: 'constructionPermit' })"
-          ></section>
-          <section class="high-school" @click="$router.push({ name: 'highSchool' })"></section>
+          <AccessDemoCard
+            :usageTypes="['Service Design', 'UI/UX']"
+            :title="'High-School Graduation Certificate '"
+            :features="[
+              'Identity',
+              'Payment',
+              'Information Mediator',
+              'Digital Registry',
+              'Consent',
+            ]"
+            :description="'Demonstrating service design, UX/UI BB usage and mobile first approach through construction permit use case.'"
+            :route="'highSchool'"
+          ></AccessDemoCard>
+          <AccessDemoCard
+            :usageTypes="['Front-End', 'Service Design', 'UI/UX']"
+            :title="'Construction Permit'"
+            :features="[
+              'Identity',
+              'Payment',
+              'GIS',
+              'Information Mediator',
+              'Digital Registry',
+              'Consent',
+            ]"
+            :description="'Demonstrating service design, UX/UI BB usage and mobile first approach through construction permit use case.'"
+            :route="'constructionPermit'"
+          ></AccessDemoCard>
         </div>
       </div>
     </div>
@@ -30,87 +71,27 @@ import BaseSection from '@/components/BaseSection.vue'
 .access-demos-content {
   display: flex;
   flex-direction: column;
-  width: 1250px;
 }
 
 .access-demos-content h1 {
   font-size: 3rem;
   white-space: nowrap;
   color: var(--gs-primary);
-  width: 100%;
 }
 
 .access-demos-content-row {
   display: flex;
-  justify-content: space-between;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0;
+  gap: 4rem;
 }
 
-@media (width < 1500px) {
-  .access-demos-content {
-    align-items: center;
-    width: 100%;
-  }
+.access-demos-content-row > * {
+  flex: 1;
+}
 
+@media (width < 1400px) {
   .access-demos-content-row {
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
-    margin-top: 0;
-    width: 602px;
   }
-
-  .access-demos-content-row section {
-    margin: 2rem 0;
-  }
-}
-
-.early-warning {
-  width: 602px;
-  height: 312px;
-  background: url('@/assets/images/access-demo-content-early-warning.png') center center no-repeat;
-}
-
-.early-warning:hover {
-  background: url('@/assets/images/access-demo-content-early-warning-hover.png') center center
-    no-repeat;
-  cursor: pointer;
-}
-
-.cash-transfer {
-  width: 602px;
-  height: 312px;
-  background: url('@/assets/images/access-demo-content-cash-transfer.png') center center no-repeat;
-}
-
-.cash-transfer:hover {
-  background: url('@/assets/images/access-demo-content-cash-transfer-hover.png') center center
-    no-repeat;
-  cursor: pointer;
-}
-
-.construction-permit {
-  width: 602px;
-  height: 312px;
-  background: url('@/assets/images/access-demo-content-construction-permit.png') center center
-    no-repeat;
-}
-
-.construction-permit:hover {
-  background: url('@/assets/images/access-demo-content-construction-permit-hover.png') center center
-    no-repeat;
-  cursor: pointer;
-}
-
-.high-school {
-  width: 602px;
-  height: 312px;
-  background: url('@/assets/images/access-demo-content-high-school.png') center center no-repeat;
-}
-
-.high-school:hover {
-  background: url('@/assets/images/access-demo-content-high-school-hover.png') center center
-    no-repeat;
-  cursor: pointer;
 }
 </style>
