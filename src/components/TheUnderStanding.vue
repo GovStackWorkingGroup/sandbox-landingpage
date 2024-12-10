@@ -18,7 +18,7 @@ import BaseBorderFrame from '@/components/BaseBorderFrame.vue'
   >
     <div class="understanding-wrapper">
       <div class="understanding-content">
-        <BaseBorderFrame>
+        <BaseBorderFrame colorL="green" colorT="green" colorR="orange" colorB="orange">
           <h2>Understanding GovStack Sandbox</h2>
           <div class="columns">
             <div class="left">
