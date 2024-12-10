@@ -17,6 +17,7 @@ const gsTheme: ThemeDefinition = {
     'gs-body': '#0f2e66',
     'gs-surface-light': '#f9fbff',
     'gs-green': '#3cd18c',
+    'gs-orange': '#ffb4ab',
   },
 }
 
