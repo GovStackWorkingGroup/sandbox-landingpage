@@ -36,8 +36,7 @@
 }
 
 .app-footer .bottom-row {
-  font-size: 1.25rem;
-  margin: 1rem;
+  margin: 2rem 1rem 1rem 1rem;
 }
 
 .social-networks,

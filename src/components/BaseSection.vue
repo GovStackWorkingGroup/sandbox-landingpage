@@ -37,7 +37,7 @@ const bgStyle = computed(() => {
 
 <template>
   <div class="wrapper" :style="bgStyle">
-    <div class="blur" :class="[props.blurColor]">
+    <div :class="[props.blurColor, { blur: props.hasBlur }]">
       <div class="content">
         <slot></slot>
       </div>

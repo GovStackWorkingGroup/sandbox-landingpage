@@ -2,7 +2,7 @@
 import TheEnterSandbox from '@/components/TheEnterSandbox.vue'
 import TheUnderStanding from '@/components/TheUnderStanding.vue'
 import TheEgovIntro from '@/components/TheEgovIntro.vue'
-import TheBuildingBlocks from '@/components/TheBuildingBlocks.vue'
+import TheEgovPage from '@/components/TheEgovPage.vue'
 import TheAccessDemos from '@/components/TheAccessDemos.vue'
 import TheWantToLearnMore from '@/components/TheWantToLearnMore.vue'
 import TheWantToBecomePartner from '@/components/TheWantToBecomePartner.vue'
@@ -14,7 +14,7 @@ import TheAppFooter from '@/components/TheAppFooter.vue'
     <TheEnterSandbox />
     <TheUnderStanding />
     <TheEgovIntro />
-    <TheBuildingBlocks />
+    <TheEgovPage />
     <TheAccessDemos />
     <TheWantToLearnMore />
     <TheWantToBecomePartner />
