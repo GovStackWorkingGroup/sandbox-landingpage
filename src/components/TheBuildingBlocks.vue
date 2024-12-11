@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { mdiInformationOutline } from '@mdi/js'
+import AnimatedText from '@/components/AnimatedText.vue'
 
 const buildingBlocksWrapper = ref()
 onMounted(() => {
@@ -15,25 +16,6 @@ onMounted(() => {
   })
 
   observer.observe(buildingBlocksWrapper.value)
-})
-
-const buildingBlocksTexts = [
-  { text: 'building blocks', color: 'var(--gs-primary)' },
-  { text: 'designs', color: 'var(--gs-primary)' },
-  { text: 'methodologies', color: 'var(--gs-green)' },
-]
-const intervalId = ref()
-const currentIndex = ref(0)
-const currentText = ref('building blocks')
-const currentColor = ref('')
-intervalId.value = setInterval(() => {
-  currentIndex.value = (currentIndex.value + 1) % buildingBlocksTexts.length
-  currentText.value = buildingBlocksTexts[currentIndex.value].text
-  currentColor.value = buildingBlocksTexts[currentIndex.value].color
-}, 2000)
-
-onUnmounted(() => {
-  clearInterval(intervalId.value)
 })
 
 const buildingBlocksElements = ref()
@@ -133,12 +115,10 @@ const changeBuildingsBlocks = (area: string) => {
     </div>
     <div class="building-blocks-elements" ref="buildingBlocksElements"></div>
     <div class="building-blocks-description">
-      <p>
-        Reusing same
-        <span class="building-blocks-description-random-text" :style="{ color: currentColor }">{{
-          currentText
-        }}</span>
-      </p>
+      <div class="animated-text-area">
+        <span>Reusing same</span>
+        <AnimatedText :texts="['building blocks', 'designs', 'methodologies', 'building blocks']" />
+      </div>
       <p>
         across all
         <span class="building-blocks-description-where"
@@ -289,9 +269,8 @@ building blocks
   color: var(--gs-primary);
 }
 
-.building-blocks-description-random-text {
-  font-weight: bold;
-  font-family: monospace;
+.animated-text-area {
+  display: flex;
 }
 
 .building-blocks-description-where {
