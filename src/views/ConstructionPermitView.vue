@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { useRouter } from 'vue-router'
 import {
   mdiChevronLeft,
   mdiCheck,
@@ -16,10 +15,8 @@ onMounted(() => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 })
 
-const router = useRouter()
-
 const goBack = () => {
-  router.push({ name: 'home' })
+  window.history.back()
 }
 </script>
 
