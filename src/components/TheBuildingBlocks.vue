@@ -41,6 +41,14 @@ const changeBuildingsBlocks = (area: string) => {
     buildingBlocksElements.value.classList.remove('building-blocks-elements-right')
   }
 }
+
+const tooltip = ref()
+const showTooltip = () => {
+  tooltip.value.classList.remove('hidden')
+}
+const hideTooltip = () => {
+  tooltip.value.classList.add('hidden')
+}
 </script>
 
 <template>
@@ -111,7 +119,15 @@ const changeBuildingsBlocks = (area: string) => {
 
     <div class="building-blocks-headline">
       <p>Building Blocks</p>
-      <v-icon :icon="mdiInformationOutline" size="32"></v-icon>
+      <span class="info-icon" @mouseover="showTooltip" @mouseout="hideTooltip">
+        <v-icon :icon="mdiInformationOutline" size="32"></v-icon>
+        <div class="tooltip hidden" ref="tooltip">
+          <span>
+            Building blocks are enterprise-ready, reusable software components providing key
+            functionality facilitating generic WorkFlows across multiple sectors.
+          </span>
+        </div>
+      </span>
     </div>
     <div class="building-blocks-elements" ref="buildingBlocksElements"></div>
     <div class="building-blocks-description">
@@ -234,6 +250,22 @@ building blocks
 
 .building-blocks-headline p {
   margin-right: 1rem;
+}
+
+.info-icon {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  min-width: 16rem;
+  padding: 1rem;
+  background: var(--gs-dark);
+  color: var(--gs-white);
+  font-size: 0.9rem;
+  text-align: left;
 }
 
 .building-blocks-elements {

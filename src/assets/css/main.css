@@ -20,3 +20,11 @@
   color: var(--gs-white);
   text-decoration: underline;
 }
+
+/**
+utils
+*/
+
+.hidden {
+  display: none;
+}
