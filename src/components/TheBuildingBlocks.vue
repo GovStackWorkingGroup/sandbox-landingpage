@@ -129,6 +129,7 @@ const hideTooltip = () => {
         </div>
       </span>
     </div>
+    <div class="building-blocks-elements-static"></div>
     <div class="building-blocks-elements" ref="buildingBlocksElements"></div>
     <div class="building-blocks-description">
       <div class="animated-text-area">
@@ -156,11 +157,15 @@ building blocks
   width: 100%;
   bottom: 0;
   transform: scale(0.8);
-  transition: transform 0.5s ease-out;
+  opacity: 0.2;
+  transition:
+    transform 0.5s ease-out,
+    opacity 0.5s ease-out;
 }
 
 .building-blocks-wrapper.change {
   transform: scale(1);
+  opacity: 1;
 }
 
 .building-blocks-bg-bottom-right {
@@ -268,6 +273,7 @@ building blocks
   text-align: left;
 }
 
+.building-blocks-elements-static,
 .building-blocks-elements {
   position: absolute;
   top: 14rem;
@@ -277,14 +283,29 @@ building blocks
 }
 
 .building-blocks-elements-left {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
   background: url('@/assets/images/building-blocks-elements-left.png') bottom center no-repeat;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .building-blocks-elements-center {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
   background: url('@/assets/images/building-blocks-elements-center.png') bottom center no-repeat;
 }
 
 .building-blocks-elements-right {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
   background: url('@/assets/images/building-blocks-elements-right.png') bottom center no-repeat;
 }
 
