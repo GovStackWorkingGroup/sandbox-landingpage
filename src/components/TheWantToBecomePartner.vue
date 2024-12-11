@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiBookOpenBlankVariant } from '@mdi/js'
+import { mdiEmail } from '@mdi/js'
 import BaseSection from '@/components/BaseSection.vue'
 </script>
 
@@ -12,20 +12,20 @@ import BaseSection from '@/components/BaseSection.vue'
           <div class="partner-column">
             <h2>Add Your Digital Public Good</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nemo iste quaerat
-              facere, tenetur magni! Quia nulla incidunt sit veritatis inventore recusandae,
-              delectus odit consequatur optio, repellat doloremque. Id, corrupti.
+              You are providing a software solution compliant to GovStack’s building block? Let’s
+              deploy it on the sandbox and make it available to one of the upcoming services which
+              will be developed with partner governments.
             </p>
-            <v-btn :prepend-icon="mdiBookOpenBlankVariant" color="gs-primary">Click me</v-btn>
+            <v-btn :prepend-icon="mdiEmail" color="gs-primary">Contact Us</v-btn>
           </div>
           <div class="partner-column">
             <h2>Add Demo of your Services</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nemo iste quaerat
-              facere, tenetur magni! Quia nulla incidunt sit veritatis inventore recusandae,
-              delectus odit consequatur optio, repellat doloremque. Id, corrupti.
+              Have you build a government service using GovStack’s building blocks? Let’s showcase
+              the service together on our sandbox. The service needs to be build on at least 3
+              separated Building Blocks.
             </p>
-            <v-btn :prepend-icon="mdiBookOpenBlankVariant" color="gs-primary">Click me</v-btn>
+            <v-btn :prepend-icon="mdiEmail" color="gs-primary">Contact Us</v-btn>
           </div>
         </div>
       </div>

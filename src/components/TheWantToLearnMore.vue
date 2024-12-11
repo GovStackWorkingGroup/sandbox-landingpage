@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiBookOpenBlankVariant } from '@mdi/js'
+import { mdiBookOpenBlankVariant, mdiGit } from '@mdi/js'
 import BaseSection from '@/components/BaseSection.vue'
 </script>
 
@@ -13,9 +13,14 @@ import BaseSection from '@/components/BaseSection.vue'
             Access comprehensive documentation for developers, architects, and implementation teams.
           </p>
         </div>
-        <v-btn :prepend-icon="mdiBookOpenBlankVariant" color="gs-primary"
-          >Sandbox GitBook Documentation</v-btn
-        >
+        <div>
+          <v-btn :prepend-icon="mdiBookOpenBlankVariant" color="gs-primary" block class="mb-2"
+            >Sandbox GitBook Documentation</v-btn
+          >
+          <v-btn :prepend-icon="mdiGit" color="gs-primary" block
+            >Sandbox GitBook Repositories</v-btn
+          >
+        </div>
       </div>
     </div>
   </BaseSection>
