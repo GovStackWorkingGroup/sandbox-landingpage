@@ -247,7 +247,6 @@ building blocks
   justify-content: center;
   position: absolute;
   width: 100%;
-  text-align: center;
   top: 11rem;
   font-size: 1.75rem;
   color: var(--gs-primary);
@@ -258,6 +257,7 @@ building blocks
 }
 
 .info-icon {
+  margin-bottom: 0.1em;
   position: relative;
 }
 

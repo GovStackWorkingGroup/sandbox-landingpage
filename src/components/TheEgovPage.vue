@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import TheBuildingBlocks from '@/components/TheBuildingBlocks.vue'
+import BaseSticker from '@/components/BaseSticker.vue'
+const title = 'eGov Mockup'
+const content = 'This is a demonstration to showcase GovStack Building Blocks in action'
 </script>
 
 <template>
   <div class="egov-wrapper">
-    <div class="egov-page"></div>
+    <div class="egov-page">
+      <BaseSticker :title="title" :content="content" class="sticker" />
+    </div>
     <TheBuildingBlocks />
   </div>
 </template>
@@ -30,5 +35,11 @@ import TheBuildingBlocks from '@/components/TheBuildingBlocks.vue'
   border: 0.5rem solid var(--gs-gray);
   border-radius: 1rem;
   box-sizing: content-box;
+}
+
+.sticker {
+  position: absolute;
+  bottom: 29rem;
+  right: -7rem;
 }
 </style>
