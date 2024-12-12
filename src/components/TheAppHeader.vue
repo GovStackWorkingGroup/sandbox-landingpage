@@ -1,15 +1,19 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { mdiOpenInNew, mdiChevronDown } from '@mdi/js'
-
-const emit = defineEmits<{
-  scroll: [value: string]
-}>()
+import { useUI } from '@/composables/useUI'
 
 const router = useRouter()
-const goHome = () => {
-  emit('scroll', 'enter-sandbox-wrapper')
-  router.push({ name: 'home' })
+const { scrollIntoView } = useUI()
+
+const navigate = (target?: string) => {
+  const elem = target && document.querySelector(`#${target}`)
+
+  if (elem) {
+    scrollIntoView(target)
+  } else {
+    router.push(`/#${target}`)
+  }
 }
 
 const menuItems = [
@@ -23,25 +27,20 @@ const menuItems = [
 <template>
   <header class="app-header">
     <!-- logo -->
-    <div class="logo-wrapper" @click="goHome">
+    <div class="logo-wrapper" @click="navigate('enter-sandbox-wrapper')">
       <i class="logo-gs" color="gs-primary"></i>
     </div>
 
     <!-- nav links -->
     <div class="nav-links">
-      <v-btn
-        v-if="$route.name == 'home'"
-        variant="text"
-        @click="emit('scroll', 'understanding-wrapper')"
-        >Overview</v-btn
-      >
+      <v-btn variant="text" @click="navigate('understanding-wrapper')">Overview</v-btn>
       <v-menu>
         <template v-slot:activator="{ props }">
           <v-btn
             :append-icon="mdiChevronDown"
             v-bind="props"
             variant="text"
-            @click="emit('scroll', 'access-demos-wrapper')"
+            @click="scrollIntoView('access-demos-wrapper')"
           >
             Demos
           </v-btn>
@@ -54,9 +53,7 @@ const menuItems = [
           </v-list-item>
         </v-list>
       </v-menu>
-      <v-btn v-if="$route.name == 'home'" variant="text" @click="emit('scroll', 'app-footer')"
-        >Contact</v-btn
-      >
+      <v-btn variant="text" @click="navigate('app-footer')">Contact</v-btn>
     </div>
 
     <!-- menu -->

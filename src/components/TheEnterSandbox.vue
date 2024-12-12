@@ -4,7 +4,7 @@ import BaseSection from '@/components/BaseSection.vue'
 
 <template>
   <BaseSection rightBottomImage="enter-sandbox-bg-bottom-right">
-    <div class="enter-sandbox-wrapper">
+    <div class="enter-sandbox-wrapper" id="enter-sandbox-wrapper">
       <!-- text -->
       <div class="enter-sandbox-intro-text">
         <h1>Enter the</h1>

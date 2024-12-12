@@ -16,7 +16,7 @@ import BaseBorderFrame from '@/components/BaseBorderFrame.vue'
     leftBottomImage="understanding-bg-bottom-left"
     blurColor="dark"
   >
-    <div class="understanding-wrapper">
+    <div class="understanding-wrapper" id="understanding-wrapper">
       <div class="understanding-content">
         <BaseBorderFrame colorL="green" colorT="green" colorR="orange" colorB="orange">
           <h2>Understanding GovStack Sandbox</h2>

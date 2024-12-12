@@ -1,5 +1,5 @@
 <template>
-  <footer class="app-footer">
+  <footer id="app-footer" class="app-footer">
     <div class="top-row">
       <i class="logo-bmz"></i>
       <i class="logo-giz"></i>
