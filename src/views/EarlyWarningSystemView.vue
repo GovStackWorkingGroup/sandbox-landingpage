@@ -10,6 +10,7 @@ import {
   mdiBookOpenBlankVariant,
 } from '@mdi/js'
 import BaseSection from '@/components/BaseSection.vue'
+import BaseBuildingBlocks from '@/components/BaseBuildingBlocks.vue'
 import { useUI } from '@/composables/useUI'
 
 const { navigate } = useUI()
@@ -36,15 +37,29 @@ const { navigate } = useUI()
           </div>
           <h1>Early Warning System</h1>
           <div class="gs-row">
-            <p>
-              Here you can find demonstration of a full stack implementation of an early warning
-              system prototype focusing on efficient communication between civil servants and
-              communities. <br /><br />
-              The demo of a early warning system focuses on efficient communication between civil
-              servants and communities in a given region. The system enables civil servants to
-              validate raw threat information and create broadcasts to inform communities about
-              potential hazards, while collecting structured feedback from recipients.
-            </p>
+            <div>
+              <p>
+                Here you can find demonstration of a full stack implementation of an early warning
+                system prototype focusing on efficient communication between civil servants and
+                communities. <br /><br />
+                The demo of a early warning system focuses on efficient communication between civil
+                servants and communities in a given region. The system enables civil servants to
+                validate raw threat information and create broadcasts to inform communities about
+                potential hazards, while collecting structured feedback from recipients.
+              </p>
+              <v-expansion-panels class="mt-4">
+                <v-expansion-panel>
+                  <v-expansion-panel-title>What is a Early Warning System:</v-expansion-panel-title>
+                  <v-expansion-panel-text>
+                    An integrated system of hazard monitoring, forecasting and prediction, disaster
+                    risk assessment, communication and preparedness activities systems and processes
+                    that enables individuals, communities, governments, businesses and others to
+                    take timely action to reduce disaster risks in advance of hazardous events.
+                    (Source: UNDRR Terminology)
+                  </v-expansion-panel-text>
+                </v-expansion-panel>
+              </v-expansion-panels>
+            </div>
             <i class="demo-image" />
           </div>
 
@@ -80,7 +95,14 @@ const { navigate } = useUI()
                   in action.
                 </p>
               </div>
-              <i class="featured-building-blocks"></i>
+
+              <BaseBuildingBlocks
+                :features="[
+                  { title: 'Information Mediator', description: 'Software: Kafka' },
+                  { title: 'Digital Registry', description: 'Software: PostgreSQL' },
+                  { title: 'Messaging', description: 'Software: RapidPro' },
+                ]"
+              />
             </div>
           </div>
           <div class="gs-row">
@@ -110,7 +132,14 @@ const { navigate } = useUI()
                   <p>Password: asdf1234</p>
                 </div>
               </div>
-              <v-btn :prepend-icon="mdiLaptop" color="gs-primary">User interface Demo</v-btn>
+              <v-btn
+                :prepend-icon="mdiLaptop"
+                color="gs-primary"
+                href="https://early-warnings.playground.sandbox-playground.com/auth/login"
+                target="_blank"
+                class="mb-2"
+                >User interface Demo</v-btn
+              >
               <div class="infobox">
                 <v-icon :icon="mdiInformationOutline"></v-icon>
                 <p>
@@ -158,7 +187,12 @@ const { navigate } = useUI()
                   </p>
                 </div>
 
-                <v-btn :prepend-icon="mdiBookOpenBlankVariant" color="gs-primary" variant="outlined"
+                <v-btn
+                  :prepend-icon="mdiBookOpenBlankVariant"
+                  color="gs-primary"
+                  variant="outlined"
+                  href="https://govstack.gitbook.io/sandbox/access-demos/early-warning-tech-demo"
+                  target="_blank"
                   >Documentation</v-btn
                 >
               </div>
@@ -241,7 +275,7 @@ const { navigate } = useUI()
 /* demo feature */
 .demo-feature {
   display: flex;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .demo-feature p {
@@ -252,16 +286,18 @@ const { navigate } = useUI()
 .infobox {
   display: flex;
   background: var(--gs-surface-light);
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   padding: 1rem;
 }
 
 .infobox p {
   padding-left: 0.25rem;
+  font-size: 0.8rem;
 }
 
 .infobox h4 {
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 0.9rem;
   padding-left: 0.25rem;
 }
 

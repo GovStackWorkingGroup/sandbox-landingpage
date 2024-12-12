@@ -15,7 +15,11 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
           <AccessDemoCard
             :usageTypes="['Back-End', 'Front-End', 'UX/UI']"
             :title="'Early Warning System'"
-            :features="['Information Mediator', 'Digital Registry', 'Messaging']"
+            :features="[
+              { title: 'Information Mediator' },
+              { title: 'Digital Registry' },
+              { title: 'Messaging' },
+            ]"
             :description="'Demonstrating Govstack architecture and a-sync data exchange through early warning system use case.'"
             :route="'earlyWarning'"
           ></AccessDemoCard>
@@ -23,11 +27,11 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
             :usageTypes="['Back-End', 'Front-End']"
             :title="'Social Cash Transfer'"
             :features="[
-              'Identity',
-              'Payment',
-              'Information Mediator',
-              'Digital Registry',
-              'Consent',
+              { title: 'Identity' },
+              { title: 'Payment' },
+              { title: 'Information Mediator' },
+              { title: 'Digital Registry' },
+              { title: 'Consent' },
             ]"
             :description="'Demonstrating Govstack architecture  and all stack layers through a Unconditional Social Cash Transfer (USCT) use case.'"
             :route="'cashTransfer'"
@@ -38,11 +42,11 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
             :usageTypes="['Service Design', 'UI/UX']"
             :title="'High-School Graduation Certificate '"
             :features="[
-              'Identity',
-              'Payment',
-              'Information Mediator',
-              'Digital Registry',
-              'Consent',
+              { title: 'Identity' },
+              { title: 'Payment' },
+              { title: 'Information Mediator' },
+              { title: 'Digital Registry' },
+              { title: 'Consent' },
             ]"
             :description="'Demonstrating service design, UX/UI BB usage and mobile first approach through construction permit use case.'"
             :route="'highSchool'"
@@ -51,12 +55,12 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
             :usageTypes="['Front-End', 'Service Design', 'UI/UX']"
             :title="'Construction Permit'"
             :features="[
-              'Identity',
-              'Payment',
-              'GIS',
-              'Information Mediator',
-              'Digital Registry',
-              'Consent',
+              { title: 'Identity' },
+              { title: 'Payment' },
+              { title: 'GIS' },
+              { title: 'Information Mediator' },
+              { title: 'Digital Registry' },
+              { title: 'Consent' },
             ]"
             :description="'Demonstrating service design, UX/UI BB usage and mobile first approach through construction permit use case.'"
             :route="'constructionPermit'"

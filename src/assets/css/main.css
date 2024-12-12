@@ -28,3 +28,16 @@ utils
 .hidden {
   display: none;
 }
+
+/**
+vuetify overrides
+*/
+
+.v-expansion-panel {
+  background: var(--gs-surface-light);
+  border: 1px solid var(--gs-gray-light);
+}
+
+.v-expansion-panel-title {
+  color: var(--gs-primary);
+}

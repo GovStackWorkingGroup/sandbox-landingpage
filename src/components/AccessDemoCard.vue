@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { mdiCubeOutline, mdiChevronRight } from '@mdi/js'
+import { mdiChevronRight } from '@mdi/js'
 import BaseBorderFrame from '@/components/BaseBorderFrame.vue'
+import BaseBuildingBlocks from '@/components/BaseBuildingBlocks.vue'
+import type { Feature } from './BaseBuildingBlocks.vue'
 
 const props = defineProps({
   usageTypes: {
@@ -12,7 +14,7 @@ const props = defineProps({
     required: true,
   },
   features: {
-    type: Array<string>,
+    type: Array<Feature>,
     required: true,
   },
   description: {
@@ -36,12 +38,7 @@ const props = defineProps({
 
     <h2>{{ props.title }}</h2>
 
-    <div class="features">
-      <div class="feature" v-for="(feature, index) in props.features" :key="feature + '_' + index">
-        <v-icon :icon="mdiCubeOutline" color="gs-primary"></v-icon>
-        <span>{{ feature }}</span>
-      </div>
-    </div>
+    <BaseBuildingBlocks :features="props.features" />
 
     <p class="description">{{ props.description }}</p>
 
@@ -80,10 +77,6 @@ const props = defineProps({
   border-radius: 0.5rem;
   white-space: nowrap;
   height: 2rem;
-}
-
-.feature p {
-  padding-left: 0.5rem;
 }
 
 .description {
