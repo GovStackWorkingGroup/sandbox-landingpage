@@ -1,3 +1,5 @@
+import { useRouter } from 'vue-router'
+
 export const useUI = () => {
   const scrollIntoView = (className: string, yOffset = 190) => {
     const target = document.querySelector(`.${className}`)
@@ -11,7 +13,19 @@ export const useUI = () => {
     }
   }
 
+  const router = useRouter()
+  const navigate = (target?: string) => {
+    const elem = target && document.querySelector(`#${target}`)
+
+    if (elem) {
+      scrollIntoView(target)
+    } else {
+      router.push(`/#${target}`)
+    }
+  }
+
   return {
+    navigate,
     scrollIntoView,
   }
 }

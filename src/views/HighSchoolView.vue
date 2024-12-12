@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import {
   mdiChevronLeft,
   mdiCheck,
@@ -10,14 +9,9 @@ import {
   mdiBookOpenBlankVariant,
 } from '@mdi/js'
 import BaseSection from '@/components/BaseSection.vue'
+import { useUI } from '@/composables/useUI'
 
-onMounted(() => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-})
-
-const goBack = () => {
-  window.history.back()
-}
+const { navigate } = useUI()
 </script>
 
 <template>
@@ -27,7 +21,7 @@ const goBack = () => {
       :prepend-icon="mdiChevronLeft"
       variant="text"
       color="gs-primary"
-      @click="goBack"
+      @click="navigate('access-demos-wrapper')"
       >Back</v-btn
     >
     <BaseSection>

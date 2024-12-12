@@ -8,7 +8,7 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
     rightTopImage="access-demos-bg-top-right"
     leftBottomImage="access-demos-bg-bottom-left"
   >
-    <div class="access-demos-wrapper">
+    <div class="access-demos-wrapper" id="access-demos-wrapper">
       <div class="access-demos-content">
         <h1>Access Demos</h1>
         <div class="access-demos-content-row">
