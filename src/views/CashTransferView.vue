@@ -4,12 +4,13 @@ import {
   mdiCheck,
   mdiInformationOutline,
   mdiLaptop,
-  mdiPencilRuler,
+  mdiCodeTags,
   mdiAccountVoice,
   mdiBookOpenBlankVariant,
   mdiCog,
 } from '@mdi/js'
 import BaseSection from '@/components/BaseSection.vue'
+import BaseBuildingBlocks from '@/components/BaseBuildingBlocks.vue'
 import { useUI } from '@/composables/useUI'
 
 const { navigate } = useUI()
@@ -36,13 +37,29 @@ const { navigate } = useUI()
           </div>
           <h1>Social Cash Transfer</h1>
           <div class="gs-row">
-            <p>
-              Here you can find demonstration of a full stack implementation using a Unconditional
-              Social Cash Transfer (USCT) use case. <br /><br />
-              This demo covers only a small fraction of a Unconditional Social Cash Transfer (USCT)
-              user flow for the purpose of using various Building Block APIs. For a more
-              comprehensive visualization of the use case visit the GovStack USCT simulation.
-            </p>
+            <div>
+              <p>
+                Here you can find demonstration of a full stack implementation using a Unconditional
+                Social Cash Transfer (USCT) use case. <br /><br />
+                This demo covers only a small fraction of a Unconditional Social Cash Transfer
+                (USCT) user flow for the purpose of using various Building Block APIs. For a more
+                comprehensive visualization of the use case visit the GovStack USCT simulation.
+              </p>
+              <v-expansion-panels class="mt-4">
+                <v-expansion-panel>
+                  <v-expansion-panel-title
+                    >What is a Unconditional Social Cash Transfer(USCT):</v-expansion-panel-title
+                  >
+                  <v-expansion-panel-text>
+                    Unconditional Social Cash Transfer (USCT) programs help families meet their
+                    basic needs for well-being and safety and serves as their path to
+                    self-sufficiency. USCT are cash payments provided to financially disadvantaged
+                    or vulnerable people or households without requiring anything in return (i.e.
+                    without conditionality).
+                  </v-expansion-panel-text>
+                </v-expansion-panel>
+              </v-expansion-panels>
+            </div>
             <i class="demo-image" />
           </div>
 
@@ -78,7 +95,15 @@ const { navigate } = useUI()
                   in action.
                 </p>
               </div>
-              <i class="featured-building-blocks"></i>
+              <BaseBuildingBlocks
+                :features="[
+                  { title: 'Identity', description: 'Software: MOSIP' },
+                  { title: 'Consenty', description: 'Software: IGrant' },
+                  { title: 'Payment', description: 'Software: Mifos Payment Hub' },
+                  { title: 'Information Mediator', description: 'Software: X-Road' },
+                  { title: 'Digital Registry', description: 'Software: OpenIMIS' },
+                ]"
+              />
             </div>
           </div>
           <div class="gs-row">
@@ -100,18 +125,34 @@ const { navigate } = useUI()
               <div class="credentials gs-row">
                 <div class="gs-column">
                   <p class="headline">User Personas:</p>
-                  <p>Early Warning Analyst</p>
+                  <p>Enrollment Officer</p>
+                  <br /><br />
+                  <p class="border-t pt-2">Payment Officer</p>
                 </div>
                 <div class="gs-column">
                   <p class="headline">Persona Credentials</p>
-                  <p>ID: firstUser@test.com</p>
-                  <p>Password: asdf1234</p>
+                  <p>ID: 9038952310</p>
+                  <p>Password: 111111</p>
+                  <br />
+                  <p class="border-t pt-2">ID: 2405176278</p>
+                  <p>Password: 111111</p>
                 </div>
               </div>
-              <v-btn :prepend-icon="mdiLaptop" color="gs-primary" class="mb-2"
+              <v-btn
+                :prepend-icon="mdiLaptop"
+                color="gs-primary"
+                class="mb-2"
+                href="https://usct.playground.sandbox-playground.com/driver-poc/login"
+                targt="_blank"
                 >User interface Demo</v-btn
               >
-              <v-btn :prepend-icon="mdiCog" color="gs-primary" variant="outlined"
+              <v-btn
+                :prepend-icon="mdiCog"
+                color="gs-primary"
+                variant="outlined"
+                href="https://usct.playground.sandbox-playground.com/swagger-ui/index.html#/"
+                target="_blank"
+                class="mb-2"
                 >API Testing Interface</v-btn
               >
               <div class="infobox">
@@ -132,13 +173,13 @@ const { navigate } = useUI()
               </p>
               <div class="infobox gs-column">
                 <h3 class="headline">Who can benefit?</h3>
-                <!-- designers -->
+                <!-- software developers -->
                 <div class="benefit-item">
                   <div class="benefit-item-group">
-                    <v-icon :icon="mdiPencilRuler"></v-icon>
-                    <span>Designers</span>
+                    <v-icon :icon="mdiCodeTags"></v-icon>
+                    <span>Software Developers</span>
                   </div>
-                  <p class="benefit-item-description">Explore our service design methodology</p>
+                  <p class="benefit-item-description">Access technical resources & repositories</p>
                 </div>
 
                 <!-- decision makers -->
@@ -152,7 +193,12 @@ const { navigate } = useUI()
                   </p>
                 </div>
 
-                <v-btn :prepend-icon="mdiBookOpenBlankVariant" color="gs-primary" variant="outlined"
+                <v-btn
+                  :prepend-icon="mdiBookOpenBlankVariant"
+                  color="gs-primary"
+                  variant="outlined"
+                  href="https://govstack.gitbook.io/sandbox/access-demos/usct-use-case"
+                  target="_blank"
                   >Documentation</v-btn
                 >
               </div>
@@ -197,7 +243,7 @@ const { navigate } = useUI()
 .cash-transfer-page-content h1 {
   font-size: 3rem;
   white-space: nowrap;
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 
 /* row */
@@ -235,7 +281,7 @@ const { navigate } = useUI()
 /* demo feature */
 .demo-feature {
   display: flex;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .demo-feature p {
@@ -246,16 +292,18 @@ const { navigate } = useUI()
 .infobox {
   display: flex;
   background: var(--gs-surface-light);
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   padding: 1rem;
 }
 
 .infobox p {
   padding-left: 0.25rem;
+  font-size: 0.8rem;
 }
 
 .infobox h4 {
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 0.9rem;
   padding-left: 0.25rem;
 }
 
