@@ -40,4 +40,9 @@ vuetify overrides
 
 .v-expansion-panel-title {
   color: var(--gs-primary);
+  font-weight: 500;
+}
+
+.v-expansion-panel__shadow {
+  box-shadow: initial;
 }

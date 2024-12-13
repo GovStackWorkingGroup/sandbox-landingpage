@@ -237,7 +237,7 @@ const { navigate } = useUI()
 .early-warning-page-content h1 {
   font-size: 3rem;
   white-space: nowrap;
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 
 /* row */
