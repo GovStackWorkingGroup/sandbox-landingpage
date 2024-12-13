@@ -3,7 +3,6 @@ import {
   mdiChevronLeft,
   mdiCheck,
   mdiInformationOutline,
-  mdiLaptop,
   mdiCodeTags,
   mdiAccountVoice,
   mdiBookOpenBlankVariant,
