@@ -108,21 +108,19 @@ const { navigate } = useUI()
                 </div>
               </div>
               <v-btn
-                :prepend-icon="mdiLaptop"
                 color="gs-primary"
                 class="mb-2"
                 href="https://www.figma.com/proto/jFX6BF69qweiVNACG9YALZ/High-School-Certificate?page-id=430%3A56394&type=design&node-id=430-56395&viewport=693%2C532%2C0.14&t=ySW9vegVTfkY5fk6-1&scaling=scale-down&starting-point-node-id=430%3A56395&show-proto-sidebar=1&mode=design"
                 target="_blank"
-                >Figma Prototype</v-btn
+                ><v-icon class="icon-figma"></v-icon>Figma Prototype</v-btn
               >
               <v-btn
-                :prepend-icon="mdiBookOpenBlankVariant"
                 color="gs-primary"
                 variant="outlined"
                 href="https://www.figma.com/file/3u9LlBH11yi7nkYYAv8xFO/Somalia-Use-Case-_-High-School-Certificate?type=design&node-id=1-5&mode=design&t=MB0SzDZs93XdIfUJ-0"
                 target="_blank"
                 class="mb-2"
-                >Service Blueprint</v-btn
+                ><v-icon class="icon-figma-primary"></v-icon>Service Blueprint</v-btn
               >
               <div class="infobox">
                 <v-icon :icon="mdiInformationOutline"></v-icon>

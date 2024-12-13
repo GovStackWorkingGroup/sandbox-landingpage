@@ -65,3 +65,17 @@
   width: 1rem;
   height: 1rem;
 }
+
+.icon-figma {
+  mask: url('@/assets/images/icon-figma.svg') center / 1rem no-repeat;
+  -webkit-mask: url('@/assets/images/icon-figma.svg') center / 1rem no-repeat;
+  padding: 1rem;
+  background: var(--gs-white);
+}
+
+.icon-figma-primary {
+  mask: url('@/assets/images/icon-figma.svg') center / 1rem no-repeat;
+  -webkit-mask: url('@/assets/images/icon-figma.svg') center / 1rem no-repeat;
+  padding: 1rem;
+  background: var(--gs-primary);
+}
