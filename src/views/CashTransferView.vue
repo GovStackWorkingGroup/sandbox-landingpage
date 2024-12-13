@@ -98,7 +98,7 @@ const { navigate } = useUI()
               <BaseBuildingBlocks
                 :features="[
                   { title: 'Identity', description: 'Software: MOSIP' },
-                  { title: 'Consenty', description: 'Software: IGrant' },
+                  { title: 'Consent', description: 'Software: IGrant' },
                   { title: 'Payment', description: 'Software: Mifos Payment Hub' },
                   { title: 'Information Mediator', description: 'Software: X-Road' },
                   { title: 'Digital Registry', description: 'Software: OpenIMIS' },
