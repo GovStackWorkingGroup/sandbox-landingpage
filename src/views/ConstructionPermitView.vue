@@ -128,6 +128,7 @@ const { navigate } = useUI()
                 variant="outlined"
                 href="https://govstack.gitbook.io/sandbox/follow-methodology/best-practice-example-design-of-the-sandbox-building-permit-use-case"
                 target="_blank"
+                class="mb-2"
                 >Service Design</v-btn
               >
               <div class="infobox">

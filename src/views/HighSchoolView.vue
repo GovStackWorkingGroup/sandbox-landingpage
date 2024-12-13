@@ -35,10 +35,25 @@ const { navigate } = useUI()
           </div>
           <h1>High-School Graduation Certificate</h1>
           <div class="gs-row">
-            <p>
-              Here you can find demonstration of service and frontend design using an Online
-              High-School Graduation Certificate Use Case.
-            </p>
+            <div>
+              <p>
+                Here you can find demonstration of service and frontend design using an Online
+                High-School Graduation Certificate Use Case.
+              </p>
+              <v-expansion-panels class="mt-4">
+                <v-expansion-panel>
+                  <v-expansion-panel-title
+                    >What is a High School Graduation Certificate :</v-expansion-panel-title
+                  >
+                  <v-expansion-panel-text>
+                    A high school certificate service allows graduates to access their high school
+                    certificates digitally. It eliminates the need for physical copies of
+                    certificates and provides a convenient and efficient way for graduates to access
+                    and share their educational qualifications digitally.
+                  </v-expansion-panel-text>
+                </v-expansion-panel>
+              </v-expansion-panels>
+            </div>
             <i class="demo-image" />
           </div>
 
@@ -92,11 +107,22 @@ const { navigate } = useUI()
                   <p>Citizen</p>
                 </div>
               </div>
-              <v-btn :prepend-icon="mdiLaptop" color="gs-primary" class="mb-2"
-                >User interface Demo</v-btn
+              <v-btn
+                :prepend-icon="mdiLaptop"
+                color="gs-primary"
+                class="mb-2"
+                href="https://www.figma.com/proto/jFX6BF69qweiVNACG9YALZ/High-School-Certificate?page-id=430%3A56394&type=design&node-id=430-56395&viewport=693%2C532%2C0.14&t=ySW9vegVTfkY5fk6-1&scaling=scale-down&starting-point-node-id=430%3A56395&show-proto-sidebar=1&mode=design"
+                target="_blank"
+                >Figma Prototype</v-btn
               >
-              <v-btn :prepend-icon="mdiBookOpenBlankVariant" color="gs-primary" variant="outlined"
-                >Service Design</v-btn
+              <v-btn
+                :prepend-icon="mdiBookOpenBlankVariant"
+                color="gs-primary"
+                variant="outlined"
+                href="https://www.figma.com/file/3u9LlBH11yi7nkYYAv8xFO/Somalia-Use-Case-_-High-School-Certificate?type=design&node-id=1-5&mode=design&t=MB0SzDZs93XdIfUJ-0"
+                target="_blank"
+                class="mb-2"
+                >Service Blueprint</v-btn
               >
               <div class="infobox">
                 <v-icon :icon="mdiInformationOutline"></v-icon>
@@ -136,7 +162,12 @@ const { navigate } = useUI()
                   </p>
                 </div>
 
-                <v-btn :prepend-icon="mdiBookOpenBlankVariant" color="gs-primary" variant="outlined"
+                <v-btn
+                  :prepend-icon="mdiBookOpenBlankVariant"
+                  color="gs-primary"
+                  variant="outlined"
+                  href="https://govstack.gitbook.io/sandbox/access-demos/high-school-certificate-methodology-demo"
+                  target="_blank"
                   >Documentation</v-btn
                 >
               </div>
@@ -181,7 +212,7 @@ const { navigate } = useUI()
 .high-school-page-content h1 {
   font-size: 3rem;
   white-space: nowrap;
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 
 /* row */
@@ -219,7 +250,7 @@ const { navigate } = useUI()
 /* demo feature */
 .demo-feature {
   display: flex;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .demo-feature p {
@@ -230,16 +261,18 @@ const { navigate } = useUI()
 .infobox {
   display: flex;
   background: var(--gs-surface-light);
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   padding: 1rem;
 }
 
 .infobox p {
   padding-left: 0.25rem;
+  font-size: 0.8rem;
 }
 
 .infobox h4 {
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 0.9rem;
   padding-left: 0.25rem;
 }
 
