@@ -4,11 +4,12 @@ import {
   mdiCheck,
   mdiInformationOutline,
   mdiLaptop,
-  mdiCodeTags,
+  mdiPencilRuler,
   mdiAccountVoice,
   mdiBookOpenBlankVariant,
 } from '@mdi/js'
 import BaseSection from '@/components/BaseSection.vue'
+import BaseBuildingBlocks from '@/components/BaseBuildingBlocks.vue'
 import { useUI } from '@/composables/useUI'
 
 const { navigate } = useUI()
@@ -35,10 +36,22 @@ const { navigate } = useUI()
           </div>
           <h1>Construction Permit</h1>
           <div class="gs-row">
-            <p>
-              Here you can find demonstration of service and frontend design using an Online
-              Construction Permit Use Case.
-            </p>
+            <div>
+              <p>
+                Here you can find demonstration of service and frontend design using an Online
+                Construction Permit Use Case.
+              </p>
+              <v-expansion-panels class="mt-4">
+                <v-expansion-panel>
+                  <v-expansion-panel-title>What is a Construction Permit:</v-expansion-panel-title>
+                  <v-expansion-panel-text>
+                    The Construction Permit Service provides citizen and companies a streamlined
+                    process for obtaining permits for construction, renovation, or demolition
+                    projects from the national Government.
+                  </v-expansion-panel-text>
+                </v-expansion-panel>
+              </v-expansion-panels>
+            </div>
             <i class="demo-image" />
           </div>
 
@@ -67,7 +80,16 @@ const { navigate } = useUI()
                 <v-icon :icon="mdiInformationOutline"></v-icon>
                 <p>This demo presents Building Blocks at a conceptual level only.</p>
               </div>
-              <i class="featured-building-blocks"></i>
+              <BaseBuildingBlocks
+                :features="[
+                  { title: 'Identity' },
+                  { title: 'Payment' },
+                  { title: 'Information Mediator' },
+                  { title: 'Digital Registry' },
+                  { title: 'Consent' },
+                  { title: 'GIS' },
+                ]"
+              />
             </div>
           </div>
           <div class="gs-row">
@@ -92,10 +114,20 @@ const { navigate } = useUI()
                   <p>Citizen</p>
                 </div>
               </div>
-              <v-btn :prepend-icon="mdiLaptop" color="gs-primary" class="mb-2"
+              <v-btn
+                :prepend-icon="mdiLaptop"
+                color="gs-primary"
+                class="mb-2"
+                href="https://bp.playground.sandbox-playground.com/"
+                target="_blank"
                 >User interface Demo</v-btn
               >
-              <v-btn :prepend-icon="mdiBookOpenBlankVariant" color="gs-primary" variant="outlined"
+              <v-btn
+                :prepend-icon="mdiBookOpenBlankVariant"
+                color="gs-primary"
+                variant="outlined"
+                href="https://govstack.gitbook.io/sandbox/follow-methodology/best-practice-example-design-of-the-sandbox-building-permit-use-case"
+                target="_blank"
                 >Service Design</v-btn
               >
               <div class="infobox">
@@ -116,13 +148,13 @@ const { navigate } = useUI()
               </p>
               <div class="infobox gs-column">
                 <h3 class="headline">Who can benefit?</h3>
-                <!-- software developers -->
+                <!-- designers -->
                 <div class="benefit-item">
                   <div class="benefit-item-group">
-                    <v-icon :icon="mdiCodeTags"></v-icon>
-                    <span>Software Developers</span>
+                    <v-icon :icon="mdiPencilRuler"></v-icon>
+                    <span>Designers</span>
                   </div>
-                  <p class="benefit-item-description">Access technical resources & repositories</p>
+                  <p class="benefit-item-description">Explore our service design methodology</p>
                 </div>
 
                 <!-- decision makers -->
@@ -136,7 +168,12 @@ const { navigate } = useUI()
                   </p>
                 </div>
 
-                <v-btn :prepend-icon="mdiBookOpenBlankVariant" color="gs-primary" variant="outlined"
+                <v-btn
+                  :prepend-icon="mdiBookOpenBlankVariant"
+                  color="gs-primary"
+                  variant="outlined"
+                  href="https://govstack.gitbook.io/sandbox/access-demos/construction-permit-use-case"
+                  target="_blank"
                   >Documentation</v-btn
                 >
               </div>
@@ -181,7 +218,7 @@ const { navigate } = useUI()
 .construction-permit-page-content h1 {
   font-size: 3rem;
   white-space: nowrap;
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 
 /* row */
@@ -225,7 +262,7 @@ const { navigate } = useUI()
 /* demo feature */
 .demo-feature {
   display: flex;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .demo-feature p {
@@ -236,16 +273,18 @@ const { navigate } = useUI()
 .infobox {
   display: flex;
   background: var(--gs-surface-light);
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   padding: 1rem;
 }
 
 .infobox p {
   padding-left: 0.25rem;
+  font-size: 0.8rem;
 }
 
 .infobox h4 {
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 0.9rem;
   padding-left: 0.25rem;
 }
 
