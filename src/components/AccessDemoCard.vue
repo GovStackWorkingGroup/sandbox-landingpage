@@ -29,7 +29,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <BaseBorderFrame>
+  <BaseBorderFrame :has-border-wrapper="true">
     <div class="usage-types">
       <span v-for="(usageType, index) in props.usageTypes" :key="usageType + '_' + index">{{
         usageType

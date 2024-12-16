@@ -22,6 +22,10 @@ const props = defineProps({
     type: Number,
     default: 6,
   },
+  hasBorderWrapper: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const style = computed(() => {
@@ -41,16 +45,18 @@ const style = computed(() => {
 
 <template>
   <div :style="style">
-    <div class="wrapper-border">
+    <div class="spacing" :class="{ 'wrapper-border': props.hasBorderWrapper }">
       <slot></slot>
     </div>
   </div>
 </template>
 
 <style scoped>
-.wrapper-border {
-  border: 1px solid var(--gs-gray-light);
+.spacing {
   padding: 2em;
   margin: 6px;
+}
+.wrapper-border {
+  border: 1px solid var(--gs-gray-light);
 }
 </style>
