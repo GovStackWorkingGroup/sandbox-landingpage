@@ -12,7 +12,7 @@ import BaseSection from '@/components/BaseSection.vue'
           <div class="partner-column">
             <h2>Add your digital public good</h2>
             <p>
-              You are providing a software solution compliant to GovStack’s building block? Let’s
+              You are providing a software solution compliant to a GovStack building block? Let’s
               deploy it on the sandbox and make it available to one of the upcoming services which
               will be developed with partner governments.
             </p>
