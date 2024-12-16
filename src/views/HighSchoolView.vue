@@ -8,6 +8,7 @@ import {
   mdiBookOpenBlankVariant,
 } from '@mdi/js'
 import BaseSection from '@/components/BaseSection.vue'
+import BaseBuildingBlocks from '@/components/BaseBuildingBlocks.vue'
 import { useUI } from '@/composables/useUI'
 
 const { navigate } = useUI()
@@ -78,7 +79,15 @@ const { navigate } = useUI()
                 <v-icon :icon="mdiInformationOutline"></v-icon>
                 <p>This demo presents Building Blocks at a conceptual level only.</p>
               </div>
-              <i class="featured-building-blocks"></i>
+              <BaseBuildingBlocks
+                :features="[
+                  { title: 'Identity' },
+                  { title: 'Payment' },
+                  { title: 'Information Mediator' },
+                  { title: 'Digital Registry' },
+                  { title: 'Consent' },
+                ]"
+              />
             </div>
           </div>
           <div class="gs-row">
