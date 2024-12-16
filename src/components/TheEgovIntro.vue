@@ -7,12 +7,12 @@ import BaseSection from '@/components/BaseSection.vue'
     <div class="egov-intro-wrapper">
       <div class="egov-intro-content">
         <h1>
-          Ever Wonder How to Build <br />
-          Digital Government <br />
-          Services?
+          Ever wonder how to build <br />
+          digital government <br />
+          services?
         </h1>
         <p>
-          Step into our Sandbox to explore how modern e-government solutions are created using
+          Step into our Sandbox to explore how modern government solutions are created using
           reusable components, proven patterns, and scalable architecture.
         </p>
       </div>

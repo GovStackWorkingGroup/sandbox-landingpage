@@ -10,22 +10,34 @@ import BaseSection from '@/components/BaseSection.vue'
         <h1>Want to become a partner?</h1>
         <div class="partner-row">
           <div class="partner-column">
-            <h2>Add Your Digital Public Good</h2>
+            <h2>Add your digital public good</h2>
             <p>
               You are providing a software solution compliant to GovStack’s building block? Let’s
               deploy it on the sandbox and make it available to one of the upcoming services which
               will be developed with partner governments.
             </p>
-            <v-btn :prepend-icon="mdiEmail" color="gs-primary">Contact Us</v-btn>
+            <v-btn
+              :prepend-icon="mdiEmail"
+              color="gs-primary"
+              href="https://www.govstack.global/about/contact/"
+              target="_blank"
+              >Contact Us</v-btn
+            >
           </div>
           <div class="partner-column">
-            <h2>Add Demo of your Services</h2>
+            <h2>Add demo of your services</h2>
             <p>
-              Have you build a government service using GovStack’s building blocks? Let’s showcase
-              the service together on our sandbox. The service needs to be build on at least 3
-              separated Building Blocks.
+              Have you built a government service with the building blocks of GovStack? Let's
+              present the service together in our sandbox. The service must be built on at least 3
+              separate building blocks.
             </p>
-            <v-btn :prepend-icon="mdiEmail" color="gs-primary">Contact Us</v-btn>
+            <v-btn
+              :prepend-icon="mdiEmail"
+              color="gs-primary"
+              href="https://www.govstack.global/about/contact/"
+              target="_blank"
+              >Contact Us</v-btn
+            >
           </div>
         </div>
       </div>
