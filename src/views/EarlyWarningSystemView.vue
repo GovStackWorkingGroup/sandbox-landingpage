@@ -46,7 +46,7 @@ const { navigate } = useUI()
               </p>
               <v-expansion-panels class="mt-4">
                 <v-expansion-panel>
-                  <v-expansion-panel-title>What is a Early Warning System:</v-expansion-panel-title>
+                  <v-expansion-panel-title>What is a Early Warning System?</v-expansion-panel-title>
                   <v-expansion-panel-text>
                     An integrated system of hazard monitoring, forecasting and prediction, disaster
                     risk assessment, communication and preparedness activities systems and processes

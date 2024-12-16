@@ -39,7 +39,7 @@ const { navigate } = useUI()
               <v-expansion-panels class="mt-4">
                 <v-expansion-panel>
                   <v-expansion-panel-title
-                    >What is a High School Graduation Certificate :</v-expansion-panel-title
+                    >What is a High School Graduation Certificate?</v-expansion-panel-title
                   >
                   <v-expansion-panel-text>
                     A high school certificate service allows graduates to access their high school

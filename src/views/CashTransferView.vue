@@ -45,7 +45,7 @@ const { navigate } = useUI()
               <v-expansion-panels class="mt-4">
                 <v-expansion-panel>
                   <v-expansion-panel-title
-                    >What is a Unconditional Social Cash Transfer(USCT):</v-expansion-panel-title
+                    >What is a Unconditional Social Cash Transfer(USCT)?</v-expansion-panel-title
                   >
                   <v-expansion-panel-text>
                     Unconditional Social Cash Transfer (USCT) programs help families meet their

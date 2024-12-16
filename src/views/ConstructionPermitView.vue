@@ -40,7 +40,7 @@ const { navigate } = useUI()
               </p>
               <v-expansion-panels class="mt-4">
                 <v-expansion-panel>
-                  <v-expansion-panel-title>What is a Construction Permit:</v-expansion-panel-title>
+                  <v-expansion-panel-title>What is a Construction Permit?</v-expansion-panel-title>
                   <v-expansion-panel-text>
                     The Construction Permit Service provides citizen and companies a streamlined
                     process for obtaining permits for construction, renovation, or demolition
