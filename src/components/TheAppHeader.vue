@@ -33,7 +33,7 @@ const menuItems = [
 
     <!-- nav links -->
     <div class="nav-links">
-      <v-btn variant="text" @click="navigate('understanding-wrapper')">Overview</v-btn>
+      <v-btn variant="text" @click="navigate('enter-sandbox-wrapper')">Overview</v-btn>
       <v-menu>
         <template v-slot:activator="{ props }">
           <v-btn
