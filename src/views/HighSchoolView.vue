@@ -89,14 +89,6 @@ const { navigate } = useUI()
                 Access the Early Warning System demo environment using your credentials below. All
                 demo actions are for testing purposes only.
               </p>
-              <div class="infobox gs-column">
-                <h4>Data Privacy Note:</h4>
-                <p>
-                  By clicking on one of the access points you enter web applications operated by the
-                  Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH where these
-                  Data Protection Notice and Registration Information are valid.
-                </p>
-              </div>
               <div class="credentials gs-row">
                 <div class="gs-column">
                   <p class="headline">User Personas</p>
@@ -118,13 +110,6 @@ const { navigate } = useUI()
                 class="mb-2"
                 ><v-icon class="icon-figma-primary"></v-icon>Service Blueprint</v-btn
               >
-              <div class="infobox">
-                <v-icon :icon="mdiInformationOutline"></v-icon>
-                <p>
-                  On desktop computer, you may shrink the browser window or use the the developer
-                  tools of your browser to simulate a mobile device.
-                </p>
-              </div>
             </div>
 
             <!-- all resources -->
