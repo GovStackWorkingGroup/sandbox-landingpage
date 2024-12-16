@@ -55,7 +55,7 @@ const { navigate } = useUI()
           <div class="gs-row">
             <!-- this demo includes -->
             <div class="gs-column">
-              <h2 class="headline">This Demo includes:</h2>
+              <h2 class="headline">This Demo includes</h2>
               <div class="demo-feature">
                 <v-icon :icon="mdiCheck" color="gs-green"></v-icon>
                 <p>GovStack Playbook Best Practice</p>
@@ -72,7 +72,7 @@ const { navigate } = useUI()
 
             <!-- featured building blocks -->
             <div class="gs-column">
-              <h2 class="headline">Featured Building Blocks:</h2>
+              <h2 class="headline">Featured Building Blocks</h2>
               <div class="infobox">
                 <v-icon :icon="mdiInformationOutline"></v-icon>
                 <p>This demo presents Building Blocks at a conceptual level only.</p>
@@ -107,7 +107,7 @@ const { navigate } = useUI()
               </div>
               <div class="credentials gs-row">
                 <div class="gs-column">
-                  <p class="headline">User Personas:</p>
+                  <p class="headline">User Personas</p>
                   <p>Citizen</p>
                 </div>
               </div>
@@ -271,7 +271,7 @@ const { navigate } = useUI()
 .infobox {
   display: flex;
   background: var(--gs-surface-light);
-  /* margin: 1rem 0; */
+  margin: 0.5rem 0;
   padding: 1rem;
 }
 

@@ -63,7 +63,7 @@ const { navigate } = useUI()
           <div class="gs-row">
             <!-- this demo includes -->
             <div class="gs-column">
-              <h2 class="headline">This Demo includes:</h2>
+              <h2 class="headline">This Demo includes</h2>
               <div class="demo-feature">
                 <v-icon :icon="mdiCheck" color="gs-green"></v-icon>
                 <p>GovStack Specification Compliant</p>
@@ -84,7 +84,7 @@ const { navigate } = useUI()
 
             <!-- featured building blocks -->
             <div class="gs-column">
-              <h2 class="headline">Featured Building Blocks:</h2>
+              <h2 class="headline">Featured Building Blocks</h2>
               <div class="infobox">
                 <v-icon :icon="mdiInformationOutline"></v-icon>
                 <p>
@@ -121,7 +121,7 @@ const { navigate } = useUI()
               </div>
               <div class="credentials gs-row">
                 <div class="gs-column">
-                  <p class="headline">User Personas:</p>
+                  <p class="headline">User Personas</p>
                   <p>Enrollment Officer</p>
                   <br /><br />
                   <p class="border-t pt-2">Payment Officer</p>
