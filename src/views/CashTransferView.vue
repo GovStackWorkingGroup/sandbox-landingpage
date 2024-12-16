@@ -140,7 +140,7 @@ const { navigate } = useUI()
                 color="gs-primary"
                 class="mb-2"
                 href="https://usct.playground.sandbox-playground.com/driver-poc/login"
-                targt="_blank"
+                target="_blank"
                 >User interface Demo</v-btn
               >
               <v-btn
@@ -289,7 +289,7 @@ const { navigate } = useUI()
 .infobox {
   display: flex;
   background: var(--gs-surface-light);
-  /* margin: 1rem 0; */
+  margin: 0.5rem 0;
   padding: 1rem;
 }
 
@@ -333,6 +333,6 @@ const { navigate } = useUI()
 /* utils */
 
 .headline {
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 </style>
