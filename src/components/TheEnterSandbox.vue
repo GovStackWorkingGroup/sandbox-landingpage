@@ -46,4 +46,10 @@ import BaseSection from '@/components/BaseSection.vue'
   min-width: 736px;
   background: url('@/assets/images/enter-sandbox-image.png') center center no-repeat;
 }
+
+@media (max-width: 1400px) {
+  .enter-sandbox-wrapper {
+    flex-direction: column;
+  }
+}
 </style>
