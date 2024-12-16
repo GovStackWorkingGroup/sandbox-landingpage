@@ -35,13 +35,22 @@ const style = computed(() => {
       linear-gradient(to top, var(--gs-${props.colorB}) ${props.borderWidth}px, transparent ${props.borderWidth}px) 100% 100%;
     background-repeat: no-repeat;
     background-size: 50% 50%;
-    padding: 2rem;
   `
 })
 </script>
 
 <template>
   <div :style="style">
-    <slot></slot>
+    <div class="wrapper-border">
+      <slot></slot>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.wrapper-border {
+  border: 1px solid var(--gs-gray-light);
+  padding: 2em;
+  margin: 6px;
+}
+</style>
