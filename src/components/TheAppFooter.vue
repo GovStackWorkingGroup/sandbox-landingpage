@@ -14,8 +14,8 @@
         <i class="logo-linkedin"></i>
       </div>
       <div class="legal-links">
-        <a href="">Privacy Legal</a>
-        <a href="">Code of Conduct</a>
+        <a href="https://www.govstack.global/privacy/" target="_blank">Privacy Legal</a>
+        <a href="https://www.govstack.global/coc/" target="_blank">Code of Conduct</a>
       </div>
     </div>
   </footer>
