@@ -159,8 +159,8 @@ building blocks
   transform: scale(0.8);
   opacity: 0.2;
   transition:
-    transform 0.5s ease-out,
-    opacity 0.5s ease-out;
+    transform 1s ease-out,
+    opacity 1s ease-out;
 }
 
 .building-blocks-wrapper.change {
