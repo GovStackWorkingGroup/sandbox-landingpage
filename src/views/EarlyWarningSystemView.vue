@@ -304,6 +304,10 @@ const { navigate } = useUI()
 }
 
 /* benefit item */
+h3 {
+  margin-bottom: 0.5rem;
+}
+
 .benefit-item {
   display: flex;
   flex-direction: column;
