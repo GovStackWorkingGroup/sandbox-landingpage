@@ -30,9 +30,6 @@ const { navigate } = useUI()
       <div class="cash-transfer-page-wrapper">
         <div class="cash-transfer-page-content">
           <div class="status">
-            <i class="icon-status-cube-active"></i>
-            <span class="status-text">ACTIVE</span>
-            <span class="diamond">⬧</span>
             <span class="demo-type">Tech Demo</span>
           </div>
           <h1>Social Cash Transfer</h1>

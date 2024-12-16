@@ -30,9 +30,6 @@ const { navigate } = useUI()
       <div class="early-warning-page-wrapper">
         <div class="early-warning-page-content">
           <div class="status">
-            <i class="icon-status-cube-active"></i>
-            <span class="status-text">ACTIVE</span>
-            <span class="diamond">⬧</span>
             <span class="demo-type">Tech Demo</span>
           </div>
           <h1>Early Warning System</h1>

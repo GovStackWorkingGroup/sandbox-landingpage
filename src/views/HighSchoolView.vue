@@ -27,9 +27,6 @@ const { navigate } = useUI()
       <div class="high-school-page-wrapper">
         <div class="high-school-page-content">
           <div class="status">
-            <i class="icon-status-cube-active"></i>
-            <span class="status-text">ACTIVE</span>
-            <span class="diamond">⬧</span>
             <span class="demo-type">Tech Demo</span>
           </div>
           <h1>High-School Graduation Certificate</h1>
