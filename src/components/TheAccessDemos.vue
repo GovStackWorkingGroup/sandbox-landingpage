@@ -48,7 +48,7 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
               { title: 'Digital Registry' },
               { title: 'Consent' },
             ]"
-            :description="'Demonstrating service design, UX/UI BB usage and mobile first approach through construction permit use case.'"
+            :description="'Demonstrating service design, UX/UI BB usage and mobile first approach through high school graduation certificate use case.'"
             :route="'highSchool'"
           ></AccessDemoCard>
           <AccessDemoCard
