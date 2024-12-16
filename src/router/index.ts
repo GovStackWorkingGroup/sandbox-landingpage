@@ -11,22 +11,26 @@ const router = createRouter({
     },
     {
       path: '/earlyWarning',
+      meta: { title: 'GovStack Sandbox - Early Warning' },
       name: 'earlyWarning',
       component: () => import('../views/EarlyWarningSystemView.vue'),
     },
     {
       path: '/highSchool',
       name: 'highSchool',
+      meta: { title: 'GovStack Sandbox - High-School Graduation Certificate' },
       component: () => import('../views/HighSchoolView.vue'),
     },
     {
       path: '/constructionPermit',
       name: 'constructionPermit',
+      meta: { title: 'GovStack Sandbox - Construction Permit' },
       component: () => import('../views/ConstructionPermitView.vue'),
     },
     {
       path: '/cashTransfer',
       name: 'cashTransfer',
+      meta: { title: 'GovStack Sandbox - Social Cash Transfer' },
       component: () => import('../views/CashTransferView.vue'),
     },
   ],
@@ -43,6 +47,11 @@ const router = createRouter({
       return { top: 0 }
     }
   },
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = (to.meta?.title as string) || 'GovStack Sandbox'
+  next()
 })
 
 export default router
