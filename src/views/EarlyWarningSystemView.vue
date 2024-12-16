@@ -327,6 +327,6 @@ const { navigate } = useUI()
 /* utils */
 
 .headline {
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 </style>
