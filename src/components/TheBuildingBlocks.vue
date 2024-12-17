@@ -156,10 +156,10 @@ building blocks
   height: 35rem;
   width: 100%;
   bottom: 0;
-  transform: scale(0.8);
+  transform: scale(0.9);
   opacity: 0.2;
   transition:
-    transform 1s ease-out,
+    transform 0.65s ease-out,
     opacity 1s ease-out;
 }
 
