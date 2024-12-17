@@ -53,7 +53,7 @@ import BaseSection from '@/components/BaseSection.vue'
 .want-to-learn-more-content h1 {
   font-size: 3rem;
   white-space: nowrap;
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 
 .want-to-learn-more-content p {

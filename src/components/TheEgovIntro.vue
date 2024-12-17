@@ -32,7 +32,7 @@ import BaseSection from '@/components/BaseSection.vue'
 .egov-intro-content h1 {
   font-size: 3rem;
   white-space: nowrap;
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 
 .egov-intro-content p {

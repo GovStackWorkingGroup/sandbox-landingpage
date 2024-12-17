@@ -67,13 +67,13 @@ import BaseSection from '@/components/BaseSection.vue'
   font-size: 3rem;
   margin-bottom: 1rem;
   white-space: nowrap;
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 
 .want-to-become-partner-content h2 {
   font-size: 2rem;
   white-space: nowrap;
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 
 .want-to-become-partner-content p {

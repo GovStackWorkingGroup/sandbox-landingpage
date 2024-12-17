@@ -80,7 +80,7 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
 .access-demos-content h1 {
   font-size: 3rem;
   white-space: nowrap;
-  color: var(--gs-primary);
+  color: var(--gs-blue);
 }
 
 .access-demos-content-row {

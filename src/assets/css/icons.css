@@ -9,7 +9,7 @@
   mask: url('@/assets/images/logo-sandbox.svg') center / 12rem no-repeat;
   -webkit-mask: url('@/assets/images/logo-sandbox.svg') center / 12rem no-repeat;
   padding: 1.5rem 6rem;
-  background: var(--gs-primary);
+  background: var(--gs-blue);
 }
 
 .logo-bmz {
