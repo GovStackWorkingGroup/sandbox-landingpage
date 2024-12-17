@@ -17,7 +17,7 @@ const content = 'This is a demonstration to showcase GovStack Building Blocks in
 <style scoped>
 .egov-wrapper {
   position: relative;
-  height: 2640px;
+  height: 2646px;
   width: 100vw;
 }
 
@@ -26,11 +26,10 @@ const content = 'This is a demonstration to showcase GovStack Building Blocks in
   left: 50%;
   transform: translateX(-50%);
   width: 1200px;
-  height: 2200px;
+  height: 2256px;
   margin-top: 2rem;
   border-radius: 20px;
-  background: url('@/assets/images/gs-demo-2400.png') center center no-repeat;
-  background-size: 1200px;
+  background: url('@/assets/images/gs-demo-1200.png') center center no-repeat;
   box-shadow: 0px 0px 20px rgba(0, 48, 135, 0.25);
   /* backdrop-filter: blur(34.8px); */
   /* border: 0.5rem solid var(--gs-gray); */
