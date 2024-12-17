@@ -46,7 +46,7 @@ const props = defineProps({
       :prepend-icon="mdiChevronRight"
       color="gs-primary"
       @click="$router.push({ name: props.route })"
-      >Learn More</v-btn
+      >Access demo</v-btn
     >
   </BaseBorderFrame>
 </template>

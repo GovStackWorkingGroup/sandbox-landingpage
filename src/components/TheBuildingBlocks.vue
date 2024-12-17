@@ -70,7 +70,7 @@ const hideTooltip = () => {
               class="learn-more"
               variant="outlined"
               @click="$router.push({ name: 'highSchool' })"
-              >Learn more</v-btn
+              >Access demo</v-btn
             >
           </div>
         </div>
@@ -90,7 +90,7 @@ const hideTooltip = () => {
               class="learn-more"
               variant="outlined"
               @click="$router.push({ name: 'constructionPermit' })"
-              >Learn more</v-btn
+              >Access demo</v-btn
             >
           </div>
         </div>
@@ -110,7 +110,7 @@ const hideTooltip = () => {
               class="learn-more"
               variant="outlined"
               @click="$router.push({ name: 'cashTransfer' })"
-              >Learn more</v-btn
+              >Access demo</v-btn
             >
           </div>
         </div>
