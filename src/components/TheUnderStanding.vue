@@ -36,8 +36,11 @@ import BaseBorderFrame from '@/components/BaseBorderFrame.vue'
               <div class="feature">
                 <v-icon :icon="mdiLightbulbOutline" color="gs-green"></v-icon>
                 <p>
-                  Do-It-Yourself packages to learn and test specific aspects of GovStack (find more
-                  on our documentation page)
+                  Do-It-Yourself packages to learn and test specific aspects of GovStack (<a
+                    href="https://www.govstack.global/our-offerings/govspecs/"
+                    target="_blank"
+                    >find more on our documentation page</a
+                  >)
                 </p>
               </div>
             </div>
@@ -45,7 +48,12 @@ import BaseBorderFrame from '@/components/BaseBorderFrame.vue'
               <h3>What you <span class="orange">won't</span> find here</h3>
               <div class="feature">
                 <v-icon :icon="mdiCubeUnfolded" color="gs-orange"></v-icon>
-                <p>Technical building block specifications of GovStack (find them on GovSpecs)</p>
+                <p>
+                  Technical building block specifications of GovStack (find them on
+                  <a href="https://www.govstack.global/our-offerings/govspecs/" target="_blank"
+                    >GovSpecs</a
+                  >)
+                </p>
               </div>
               <div class="feature">
                 <v-icon :icon="mdiCodeTags" color="gs-orange"></v-icon>
@@ -128,5 +136,14 @@ h3 {
 
 .feature p {
   padding-left: 0.5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: undeline;
+}
+
+a:hover {
+  text-decoration: none;
 }
 </style>
