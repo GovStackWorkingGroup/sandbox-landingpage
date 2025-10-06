@@ -98,6 +98,14 @@ const { navigate } = useUI()
                 Access the Early Warning System demo environment using your credentials below. All
                 demo actions are for testing purposes only.
               </p>
+              <div class="infobox gs-column">
+                <h4>Data Privacy Note:</h4>
+                <p>
+                  By clicking on one of the access points you enter web applications operated by the
+                  Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH where these
+                  Data Protection Notice and Registration Information are valid.
+                </p>
+              </div>
               <div class="credentials gs-row">
                 <div class="gs-column">
                   <p class="headline">User Personas</p>
@@ -105,11 +113,12 @@ const { navigate } = useUI()
                 </div>
               </div>
               <v-btn
+                :prepend-icon="mdiLaptop"
                 color="gs-primary"
                 class="mb-2"
-                href="https://www.figma.com/proto/jFX6BF69qweiVNACG9YALZ/High-School-Certificate?page-id=430%3A56394&type=design&node-id=430-56395&viewport=693%2C532%2C0.14&t=ySW9vegVTfkY5fk6-1&scaling=scale-down&starting-point-node-id=430%3A56395&show-proto-sidebar=1&mode=design"
+                href="https://bp.playground.sandbox-playground.com/"
                 target="_blank"
-                ><v-icon class="icon-figma"></v-icon>Figma Prototype</v-btn
+                >User interface Demo</v-btn
               >
               <v-btn
                 color="gs-primary"
