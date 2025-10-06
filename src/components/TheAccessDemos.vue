@@ -39,7 +39,7 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
         </div>
         <div class="access-demos-content-row">
           <AccessDemoCard
-            :usageTypes="['Service Design', 'UI/UX']"
+            :usageTypes="['Front-End', 'Service Design', 'UI/UX']"
             :title="'High-School Graduation Certificate '"
             :features="[
               { title: 'Identity' },
