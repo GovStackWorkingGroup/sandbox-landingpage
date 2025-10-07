@@ -37,3 +37,12 @@ npm run build
 ```sh
 npm run lint
 ```
+
+
+## Cloud Deployment 
+
+1. sign in to AWS Amplify 
+2. run `npm run build`
+3. cd dist 
+4. zip -r ../landingpage.zip .
+5. upload to AWS Amplify
