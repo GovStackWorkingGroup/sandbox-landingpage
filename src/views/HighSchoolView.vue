@@ -6,6 +6,7 @@ import {
   mdiCodeTags,
   mdiAccountVoice,
   mdiBookOpenBlankVariant,
+  mdiLaptop,
 } from '@mdi/js'
 import BaseSection from '@/components/BaseSection.vue'
 import BaseBuildingBlocks from '@/components/BaseBuildingBlocks.vue'
