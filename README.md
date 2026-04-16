@@ -40,10 +40,7 @@ npm run lint
 ```
 
 
-## Cloud Deployment 
+## Deployment
+Use docker image to deploy the app.
 
-1. sign in to AWS Amplify 
-2. run `npm run build`
-3. cd dist 
-4. zip -r ../landingpage.zip .
-5. upload to AWS Amplify
+https://github.com/orgs/GovStackWorkingGroup/packages/container/package/sandbox-landingpage

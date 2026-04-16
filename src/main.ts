@@ -5,6 +5,8 @@ import { vuetify } from '@/utils/theme'
 import '@/assets/css/main.css'
 
 // create app
+console.log('Previous docker image is 0.0.1')
+
 const app = createApp(App)
 app.use(router)
 app.use(vuetify)
