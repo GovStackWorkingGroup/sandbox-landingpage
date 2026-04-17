@@ -139,7 +139,7 @@ const { navigate } = useUI()
                 :prepend-icon="mdiLaptop"
                 color="gs-primary"
                 class="mb-2"
-                href="https://usct.playground.sandbox-playground.com/driver-poc/login"
+                href="https://usct.sandbox.govstack.global/driver-poc/login"
                 target="_blank"
                 >User interface Demo</v-btn
               >
@@ -147,7 +147,7 @@ const { navigate } = useUI()
                 :prepend-icon="mdiCog"
                 color="gs-primary"
                 variant="outlined"
-                href="https://usct.playground.sandbox-playground.com/swagger-ui/index.html#/"
+                href="https://usct.sandbox.govstack.global/swagger-ui/index.html#/"
                 target="_blank"
                 class="mb-2"
                 >API Testing Interface</v-btn

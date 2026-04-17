@@ -132,7 +132,7 @@ const { navigate } = useUI()
               <v-btn
                 :prepend-icon="mdiLaptop"
                 color="gs-primary"
-                href="https://early-warnings.playground.sandbox-playground.com/auth/login"
+                href="https://early-warning.sandbox.govstack.global/auth/login"
                 target="_blank"
                 class="mb-2"
                 >User interface Demo</v-btn

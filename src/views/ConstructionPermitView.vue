@@ -115,7 +115,7 @@ const { navigate } = useUI()
                 :prepend-icon="mdiLaptop"
                 color="gs-primary"
                 class="mb-2"
-                href="https://bp.playground.sandbox-playground.com/"
+                href="https://ux-demo.sandbox.govstack.global/"
                 target="_blank"
                 >User interface Demo</v-btn
               >
