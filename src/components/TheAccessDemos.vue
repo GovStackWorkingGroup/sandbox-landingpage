@@ -75,6 +75,11 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
             ]"
             :description="'Demonstrating integration of Payment Building Block (Mifos Payment Hub) with an external Financial Service Provider (Mastercard) through a government pension payment service.'"
             :route="'crossborderPay'"
+            :partnerHeading="'In cooperation with'"
+            :partnerLogos="[
+              { src: '/logos/mifos.svg', alt: 'Mifos' },
+              { src: '/logos/mastercard.svg', alt: 'Mastercard' },
+            ]"
           ></AccessDemoCard>
         </div>
       </div>
