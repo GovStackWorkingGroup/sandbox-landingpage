@@ -65,6 +65,17 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
             :description="'Demonstrating service design, UX/UI BB usage and mobile first approach through construction permit use case.'"
             :route="'constructionPermit'"
           ></AccessDemoCard>
+          <AccessDemoCard
+            :usageTypes="['Front-End', 'Back-End', 'UI/UX']"
+            :title="'Cross-Border Payment'"
+            :features="[
+              { title: 'Payment' },
+              { title: 'Digital Registry' },
+              { title: 'Messaging' },
+            ]"
+            :description="'Demonstrating integration of Payment Building Block (Mifos Payment Hub) with an external Financial Service Provider (Mastercard) through a government pension payment service.'"
+            :route="'crossborderPay'"
+          ></AccessDemoCard>
         </div>
       </div>
     </div>
