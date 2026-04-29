@@ -4,6 +4,10 @@ import BaseBorderFrame from '@/components/BaseBorderFrame.vue'
 import BaseBuildingBlocks from '@/components/BaseBuildingBlocks.vue'
 import type { Feature } from './BaseBuildingBlocks.vue'
 
+interface partnerLogo {
+  src: string;
+  alt: string;
+}
 const props = defineProps({
   usageTypes: {
     type: Array<string>,
@@ -25,6 +29,13 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  partnerHeading: {
+    type: String,
+    required: false,
+  },
+  partnerLogos: {
+    type: Array<string>,
+    required: false,
 })
 </script>
 
@@ -48,6 +59,17 @@ const props = defineProps({
       @click="$router.push({ name: props.route })"
       >Access demo</v-btn
     >
+    <div v-if="partnerLogos && partner.length" class="partner">
+      <span class="partnerHeading">{{ partnerHeading ?? 'In cooperation with' }}</span>
+      <div class="partnerLogos">
+        <img
+          v-for="logo in partnerLogos"
+          :key="logo.alt"
+          :src="logo.src"
+          :alt="logo.alt"
+          class="partnerLogo"
+        />
+      </div>
   </BaseBorderFrame>
 </template>
 
@@ -86,5 +108,33 @@ const props = defineProps({
 .v-btn:hover {
   background: var(--gs-green) !important;
   color: var(--gs-primary) !important;
+}
+.partner {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.partnerHeading {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+}
+
+.partnerLogos {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.partnerLogo {
+  height: 20px;
+  width: auto;
+  object-fit: contain;
 }
 </style>
