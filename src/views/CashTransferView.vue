@@ -143,15 +143,6 @@ const { navigate } = useUI()
                 target="_blank"
                 >User interface Demo</v-btn
               >
-              <v-btn
-                :prepend-icon="mdiCog"
-                color="gs-primary"
-                variant="outlined"
-                href="https://usct.sandbox.govstack.global/swagger-ui/index.html#/"
-                target="_blank"
-                class="mb-2"
-                >API Testing Interface</v-btn
-              >
               <div class="infobox">
                 <v-icon :icon="mdiInformationOutline"></v-icon>
                 <p>
