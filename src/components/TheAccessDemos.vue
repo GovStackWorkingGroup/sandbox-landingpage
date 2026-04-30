@@ -77,7 +77,7 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
             :route="'crossborderPay'"
             :partnerHeading="'In cooperation with'"
             :partnerLogos="[
-              { src: '/logos/mifos.svg', alt: 'Mifos' },
+              { src: '/logos/mifos.png', alt: 'Mifos Payment Hub EE' },
               { src: '/logos/mastercard.svg', alt: 'Mastercard' },
             ]"
           ></AccessDemoCard>
