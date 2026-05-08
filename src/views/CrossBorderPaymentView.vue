@@ -232,8 +232,8 @@ const { navigate } = useUI()
 /* demo image */
 
 .demo-image {
-  width: 592px;
-  height: auto;
+  width: 568px;
+  height: 389px;
   background: url('@/assets/images/cross-border-pay-demo-image.png') left center no-repeat;
 }
 
