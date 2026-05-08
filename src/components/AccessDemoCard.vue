@@ -55,23 +55,24 @@ const props = defineProps({
     <BaseBuildingBlocks :features="props.features" />
 
     <p class="description">{{ props.description }}</p>
-
-    <v-btn
-      :prepend-icon="mdiChevronRight"
-      color="gs-primary"
-      @click="$router.push({ name: props.route })"
-      >Access demo</v-btn
-    >
-    <div v-if="props.partnerLogos && props.partnerLogos.length" class="partner">
-      <span class="partnerHeading">{{ props.partnerHeading ?? 'In cooperation with' }}</span>
-      <div class="partnerLogos">
-        <img
-          v-for="logo in props.partnerLogos"
-          :key="logo.alt"
-          :src="logo.src"
-          :alt="logo.alt"
-          class="partnerLogo"
-        />
+    <div class="action-row">
+      <v-btn
+        :prepend-icon="mdiChevronRight"
+        color="gs-primary"
+        @click="$router.push({ name: props.route })"
+        >Access demo</v-btn
+      >
+      <div v-if="props.partnerLogos && props.partnerLogos.length" class="partner">
+        <span class="partnerHeading">{{ props.partnerHeading ?? 'In cooperation with' }}</span>
+        <div class="partnerLogos">
+          <img
+            v-for="logo in props.partnerLogos"
+            :key="logo.alt"
+            :src="logo.src"
+            :alt="logo.alt"
+            class="partnerLogo"
+          />
+        </div>
       </div>
     </div>
   </BaseBorderFrame>
@@ -109,13 +110,18 @@ const props = defineProps({
   margin-bottom: 2rem;
 }
 
+.action-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between
+}
+
 .v-btn:hover {
   background: var(--gs-green) !important;
   color: var(--gs-primary) !important;
 }
 .partner {
-  bottom: 12px;
-  right: 12px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
