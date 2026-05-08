@@ -31,7 +31,7 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
               { title: 'Digital Registry' },
               { title: 'Messaging' },
             ]"
-            :description="'Demonstrating integration of Payment Building Block (Mifos Payment Hub) with an external Financial Service Provider (Mastercard) through a government pension payment service.'"
+            :description="'Demonstrating integration of Payment Building Block with an Financial Service Provider using a government pension payment service.'"
             :route="'crossborderPay'"
             :partnerHeading="'In cooperation with'"
             :partnerLogos="[
