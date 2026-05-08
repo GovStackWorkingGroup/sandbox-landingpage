@@ -37,8 +37,7 @@ const { navigate } = useUI()
             <div>
               <p>
                 This demo shows the execution of a cross-border payment using <a href="https://payments.mifos.org/" target="_blank">Mifos Payment Hub EE</a> and Mastercard Cross Border Services, part of Mastercard’s global money movement solution suite (<a href="https://www.mastercard.com/global/en/business/payments/mastercard-move.html" target="_blank">Mastercard Move</a>). <br /><br />
-                In this scenario, a civil servant of the Government of Zimbabwe is issuing a pension payment to a former government employee living in South Africa.<br /><br />
-                In the system's backend, the service application fetches outstanding pension payments from the pension management system*. Once the user initiates a payment, the application sends a batch of credit instructions to the Payment Building Block (Mifos Payment Hub). Mifos is forwarding these instructions to the Financial Service Provider (Mastercard). Mastercard is processing the transaction through interacting with the Zimbabwean and South African bank. Upon positive response, the service application issues a SMS message informing about successful transaction to the recepient*. (First and last step with an * are mocked in the demo)  
+                In this scenario, a civil servant of the Government of Zimbabwe is issuing a pension payment to a former government employee living in South Africa.<br /><br /> 
               </p>
               <v-expansion-panels class="mt-4">
                 <v-expansion-panel>
@@ -54,8 +53,13 @@ const { navigate } = useUI()
                     >How are transctions being processed?</v-expansion-panel-title
                   >
                   <v-expansion-panel-text>
-                  In the system's backend, the service application fetches outstanding pension payments from the pension management system*. Once the user initiates a payment, the application sends a batch of beneficiary credit instructions to the Payment Building Block (Mifos Payment Hub EE). Mifos is looking up the correct account details for these beneficiaries (stored in the account mapper) and forwarding these instructions to the Financial Service Provider (Mastercard) through a connector. Mastercard Cross-Border Services then processes the transaction, performs AML and sanctions screening, manages FX conversion, and subsequently routes the payment to the receiving institution - the South African bank. Upon positive response, the service application issues a SMS message informing about successful transaction to the recipient*. (The first and last step marked with an * are mocked for demo purposes)</br></br>
-                  The key value adds of this setup compared to existing cross-border payment solutions are: <b>Sovereignty enabling</b>: Open Source (Mifos Payment Hub EE) at the Government’s system side enabling long term payments infrastructure solution without proprietary lock-in. <b>Modularity</b>: Architecture allows Payment Building Block to process transactions of various different citizen services; <b>Speed</b>: Transactions via Mastercard can be facilitated in near real time; <b>End-to-end visibility</b>: Live transaction status; <b>Citizen-Centric</b>: Allowing individuals the flexibility to update payment methods and modalities as they need.
+                  In the system's backend, the service application fetches outstanding pension payments from the pension management system*. Once the user initiates a payment, the application sends a batch of beneficiary credit instructions to the Payment Building Block (Mifos Payment Hub EE). Mifos is looking up the correct account details for these beneficiaries (stored in the account mapper) and forwarding these instructions to the Financial Service Provider (Mastercard) through a connector. Mastercard Cross-Border Services then processes the transaction, performs AML and sanctions screening, manages FX conversion, and subsequently routes the payment to the receiving institution - the South African bank. Upon positive response, the service application issues a SMS message informing about successful transaction to the recipient*. (The first and last step marked with an * are mocked for demo purposes)<br /><br />
+                  The key value adds of this setup compared to existing cross-border payment solutions are: <br />
+                    <b>Sovereignty enabling</b>: Open Source (Mifos Payment Hub EE) at the Government’s system side enabling long term payments infrastructure solution without proprietary lock-in.<br />
+                    <b>Modularity</b>: Architecture allows Payment Building Block to process transactions of various different citizen services;<br />
+                    <b>Speed</b>: Transactions via Mastercard can be facilitated in near real time;<br />
+                    <b>End-to-end visibility</b>: Live transaction status;<br />
+                    <b>Citizen-Centric</b>: Allowing individuals the flexibility to update payment methods and modalities as they need.
                   </v-expansion-panel-text>
                 </v-expansion-panel>
               </v-expansion-panels>
@@ -69,7 +73,7 @@ const { navigate } = useUI()
               <h2 class="headline">This Demo includes</h2>
               <div class="demo-feature">
                 <v-icon :icon="mdiCheck" color="gs-green"></v-icon>
-                <p>Integration example of Mifos and Mastercard</p>
+                <p>Implementation example of GovStack's Payment Specifications</p>
               </div>
               <div class="demo-feature">
                 <v-icon :icon="mdiCheck" color="gs-green"></v-icon>
@@ -87,8 +91,8 @@ const { navigate } = useUI()
               <BaseBuildingBlocks
                 :features="[
                   { title: 'Payment', description: 'Software: Mifos Payment Hub' },
-                  { title: 'Digital Registries', description: 'Software: Mock' },
-                  { title: 'Messaging', description: 'Software: Mock' },
+                  { title: 'Digital Registries' },
+                  { title: 'Messaging' },
                 ]"
               />
             </div>
@@ -229,7 +233,7 @@ const { navigate } = useUI()
 
 .demo-image {
   width: 592px;
-  height: 290px;
+  height: auto;
   background: url('@/assets/images/cross-border-pay-demo-image.png') left center no-repeat;
 }
 
