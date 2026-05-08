@@ -24,17 +24,20 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
             :route="'earlyWarning'"
           ></AccessDemoCard>
           <AccessDemoCard
-            :usageTypes="['Back-End', 'Front-End']"
-            :title="'Social Cash Transfer'"
+            :usageTypes="['Front-End', 'Back-End']"
+            :title="'Cross-Border Payment'"
             :features="[
-              { title: 'Identity' },
               { title: 'Payment' },
-              { title: 'Information Mediator' },
               { title: 'Digital Registry' },
-              { title: 'Consent' },
+              { title: 'Messaging' },
             ]"
-            :description="'Demonstrating Govstack architecture  and all stack layers through a Unconditional Social Cash Transfer (USCT) use case.'"
-            :route="'cashTransfer'"
+            :description="'Demonstrating integration of Payment Building Block (Mifos Payment Hub) with an external Financial Service Provider (Mastercard) through a government pension payment service.'"
+            :route="'crossborderPay'"
+            :partnerHeading="'In cooperation with'"
+            :partnerLogos="[
+              { src: '/logos/mifos.png', alt: 'Mifos Payment Hub EE' },
+              { src: '/logos/mastercard.svg', alt: 'Mastercard' },
+            ]"
           ></AccessDemoCard>
         </div>
         <div class="access-demos-content-row">
@@ -65,21 +68,20 @@ import AccessDemoCard from '@/components/AccessDemoCard.vue'
             :description="'Demonstrating service design, UX/UI BB usage and mobile first approach through construction permit use case.'"
             :route="'constructionPermit'"
           ></AccessDemoCard>
+        </div>
+        <div class="access-demos-content-row">
           <AccessDemoCard
-            :usageTypes="['Front-End', 'Back-End', 'UI/UX']"
-            :title="'Cross-Border Payment'"
+            :usageTypes="['Back-End', 'Front-End']"
+            :title="'Social Cash Transfer'"
             :features="[
+              { title: 'Identity' },
               { title: 'Payment' },
+              { title: 'Information Mediator' },
               { title: 'Digital Registry' },
-              { title: 'Messaging' },
+              { title: 'Consent' },
             ]"
-            :description="'Demonstrating integration of Payment Building Block (Mifos Payment Hub) with an external Financial Service Provider (Mastercard) through a government pension payment service.'"
-            :route="'crossborderPay'"
-            :partnerHeading="'In cooperation with'"
-            :partnerLogos="[
-              { src: '/logos/mifos.png', alt: 'Mifos Payment Hub EE' },
-              { src: '/logos/mastercard.svg', alt: 'Mastercard' },
-            ]"
+            :description="'Demonstrating Govstack architecture  and all stack layers through a Unconditional Social Cash Transfer (USCT) use case.'"
+            :route="'cashTransfer'"
           ></AccessDemoCard>
         </div>
       </div>
