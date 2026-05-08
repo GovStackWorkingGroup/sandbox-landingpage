@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import { mdiChevronRight } from '@mdi/js'
+import type { PropType } from 'vue'
 import BaseBorderFrame from '@/components/BaseBorderFrame.vue'
 import BaseBuildingBlocks from '@/components/BaseBuildingBlocks.vue'
 import type { Feature } from './BaseBuildingBlocks.vue'
 
-interface partnerLogo {
+interface PartnerLogo {
   src: string;
   alt: string;
 }
+
 const props = defineProps({
   usageTypes: {
-    type: Array<string>,
+    type: Array as PropType<string[]>,
     required: true,
   },
   title: {
@@ -18,7 +20,7 @@ const props = defineProps({
     required: true,
   },
   features: {
-    type: Array<Feature>,
+    type: Array as PropType<Feature[]>,
     required: true,
   },
   description: {
@@ -34,8 +36,9 @@ const props = defineProps({
     required: false,
   },
   partnerLogos: {
-    type: Array<string>,
+    type: Array as PropType<PartnerLogo[]>,
     required: false,
+  },
 })
 </script>
 
@@ -59,17 +62,18 @@ const props = defineProps({
       @click="$router.push({ name: props.route })"
       >Access demo</v-btn
     >
-    <div v-if="partnerLogos && partner.length" class="partner">
-      <span class="partnerHeading">{{ partnerHeading ?? 'In cooperation with' }}</span>
+    <div v-if="props.partnerLogos && props.partnerLogos.length" class="partner">
+      <span class="partnerHeading">{{ props.partnerHeading ?? 'In cooperation with' }}</span>
       <div class="partnerLogos">
         <img
-          v-for="logo in partnerLogos"
+          v-for="logo in props.partnerLogos"
           :key="logo.alt"
           :src="logo.src"
           :alt="logo.alt"
           class="partnerLogo"
         />
       </div>
+    </div>
   </BaseBorderFrame>
 </template>
 
