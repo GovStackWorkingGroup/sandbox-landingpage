@@ -137,7 +137,7 @@ const props = defineProps({
 }
 
 .partnerLogo {
-  height: 20px;
+  height: 40px;
   width: auto;
   object-fit: contain;
 }
