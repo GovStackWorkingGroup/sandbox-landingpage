@@ -18,6 +18,7 @@ const navigate = (target?: string) => {
 
 const menuItems = [
   { title: 'Early Warning System', route: 'earlyWarning' },
+  { title: 'Cross-Border Payment', route: 'crossborderPay' },
   { title: 'USCT', route: 'cashTransfer' },
   { title: 'Construction Permit', route: 'constructionPermit' },
   { title: 'High School Certificate', route: 'highSchool' },
