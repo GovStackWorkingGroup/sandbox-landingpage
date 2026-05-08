@@ -114,7 +114,6 @@ const props = defineProps({
   color: var(--gs-primary) !important;
 }
 .partner {
-  position: absolute;
   bottom: 12px;
   right: 12px;
   display: flex;
