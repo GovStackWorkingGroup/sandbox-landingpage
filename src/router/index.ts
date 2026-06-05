@@ -16,6 +16,12 @@ const router = createRouter({
       component: () => import('../views/EarlyWarningSystemView.vue'),
     },
     {
+      path: '/crossborderPay',
+      name: 'crossborderPay',
+      meta: { title: 'GovStack Sandbox - Cross-Border Payment' },
+      component: () => import('../views/CrossBorderPaymentView.vue'),
+    },
+    {
       path: '/highSchool',
       name: 'highSchool',
       meta: { title: 'GovStack Sandbox - High-School Graduation Certificate' },

@@ -27,32 +27,39 @@ const { navigate } = useUI()
       >Back</v-btn
     >
     <BaseSection>
-      <div class="cash-transfer-page-wrapper">
-        <div class="cash-transfer-page-content">
+      <div class="cross-border-payment-page-wrapper">
+        <div class="cross-border-payment-page-content">
           <div class="status">
-            <span class="demo-type">Tech Demo</span>
+            <span class="demo-type">Integration Demo</span>
           </div>
-          <h1>Social Cash Transfer</h1>
+          <h1>Cross-Border Payment</h1>
           <div class="gs-row">
             <div>
               <p>
-                Here you can find demonstration of a full stack implementation using a Unconditional
-                Social Cash Transfer (USCT) use case. <br /><br />
-                This demo covers only a small fraction of a Unconditional Social Cash Transfer
-                (USCT) user flow for the purpose of using various Building Block APIs. For a more
-                comprehensive visualization of the use case visit the GovStack USCT simulation.
+                This demo shows the execution of a cross-border payment using <a href="https://payments.mifos.org/" target="_blank">Mifos Payment Hub EE</a> and <a href="https://www.mastercard.com/global/en/business/payments/mastercard-move.html" target="_blank">Mastercard Move</a>, Mastercard’s global money movement solution suite. <br /><br />
+                In this scenario, a civil servant of the Government of Zimbabwe is issuing a pension payment to a former government employee living in South Africa.<br /><br /> 
               </p>
               <v-expansion-panels class="mt-4">
                 <v-expansion-panel>
                   <v-expansion-panel-title
-                    >What is a Unconditional Social Cash Transfer(USCT)?</v-expansion-panel-title
+                    >Why are cross-border payments worth demonstrating?</v-expansion-panel-title
                   >
                   <v-expansion-panel-text>
-                    Unconditional Social Cash Transfer (USCT) programs help families meet their
-                    basic needs for well-being and safety and serves as their path to
-                    self-sufficiency. USCT are cash payments provided to financially disadvantaged
-                    or vulnerable people or households without requiring anything in return (i.e.
-                    without conditionality).
+                    Implementing cross-border payment infrastructure is challenging. It must navigate different countries’ regulations, currencies, banking systems, and compliance requirements like anti-money laundering checks, which makes transactions slow, costly, and complex. At the same time, they are essential for global trade, remittances, and international business, enabling money to move efficiently between economies and supporting economic growth worldwide.
+                  </v-expansion-panel-text>
+                </v-expansion-panel>
+              <v-expansion-panel>
+                <v-expansion-panel-title
+                    >How are transctions being processed?</v-expansion-panel-title
+                  >
+                  <v-expansion-panel-text>
+                  In the system's backend, the service application fetches outstanding pension payments from the pension management system*. Once the user initiates a payment, the application sends a batch of beneficiary credit instructions to the Payment Building Block (Mifos Payment Hub EE). Mifos is looking up the correct account details for these beneficiaries (stored in the account mapper) and forwarding these instructions to the Financial Service Provider (Mastercard) through a connector. Mastercard Move then processes the transaction, performs AML and sanctions screening, manages FX conversion, and subsequently routes the payment to the receiving institution - the South African bank. Upon positive response, the service application issues a SMS message informing about successful transaction to the recipient*. (The first and last step marked with an * are mocked for demo purposes)<br /><br />
+                  The key value adds of this setup compared to existing cross-border payment solutions are: <br />
+                    <b>Sovereignty enabling</b>: Open Source (Mifos Payment Hub EE) at the Government’s system side enabling long term payments infrastructure solution without proprietary lock-in.<br />
+                    <b>Modularity</b>: Architecture allows Payment Building Block to process transactions of various different citizen services;<br />
+                    <b>Speed</b>: Transactions via Mastercard can be facilitated in near real time;<br />
+                    <b>End-to-end visibility</b>: Live transaction status;<br />
+                    <b>Citizen-Centric</b>: Allowing individuals the flexibility to update payment methods and modalities as they need.
                   </v-expansion-panel-text>
                 </v-expansion-panel>
               </v-expansion-panels>
@@ -66,7 +73,7 @@ const { navigate } = useUI()
               <h2 class="headline">This Demo includes</h2>
               <div class="demo-feature">
                 <v-icon :icon="mdiCheck" color="gs-green"></v-icon>
-                <p>GovStack Specification Compliant</p>
+                <p>Implementation example of GovStack's Payment Specifications</p>
               </div>
               <div class="demo-feature">
                 <v-icon :icon="mdiCheck" color="gs-green"></v-icon>
@@ -74,31 +81,18 @@ const { navigate } = useUI()
               </div>
               <div class="demo-feature">
                 <v-icon :icon="mdiCheck" color="gs-green"></v-icon>
-                <p>Architectural Best Practices</p>
-              </div>
-              <div class="demo-feature">
-                <v-icon :icon="mdiCheck" color="gs-green"></v-icon>
-                <p>Reusable and Open Source</p>
+                <p>Modular Architecture</p>
               </div>
             </div>
 
             <!-- featured building blocks -->
             <div class="gs-column">
               <h2 class="headline">Featured Building Blocks</h2>
-              <div class="infobox">
-                <v-icon :icon="mdiInformationOutline"></v-icon>
-                <p>
-                  This technical demo includes log viewer where you can easily see building blocks
-                  in action.
-                </p>
-              </div>
               <BaseBuildingBlocks
                 :features="[
-                  { title: 'Identity', description: 'Software: MOSIP' },
-                  { title: 'Consent', description: 'Software: IGrant' },
                   { title: 'Payment', description: 'Software: Mifos Payment Hub' },
-                  { title: 'Information Mediator', description: 'Software: X-Road' },
-                  { title: 'Digital Registry', description: 'Software: OpenIMIS' },
+                  { title: 'Digital Registries' },
+                  { title: 'Messaging' },
                 ]"
               />
             </div>
@@ -108,7 +102,7 @@ const { navigate } = useUI()
             <div class="gs-column">
               <h2 class="headline">How to Access?</h2>
               <p>
-                Access the Early Warning System demo environment using your credentials below. All
+                Access the Cross-border payment demo environment do not require credentials. All
                 demo actions are for testing purposes only.
               </p>
               <div class="infobox gs-column">
@@ -119,37 +113,14 @@ const { navigate } = useUI()
                   Data Protection Notice and Registration Information are valid.
                 </p>
               </div>
-              <div class="credentials gs-row">
-                <div class="gs-column">
-                  <p class="headline">User Personas</p>
-                  <p>Enrollment Officer</p>
-                  <br /><br />
-                  <p class="border-t pt-2">Payment Officer</p>
-                </div>
-                <div class="gs-column">
-                  <p class="headline">Persona Credentials</p>
-                  <p>ID: 9038952310</p>
-                  <p>Password: 111111</p>
-                  <br />
-                  <p class="border-t pt-2">ID: 2405176278</p>
-                  <p>Password: 111111</p>
-                </div>
-              </div>
               <v-btn
                 :prepend-icon="mdiLaptop"
                 color="gs-primary"
                 class="mb-2"
-                href="https://usct.sandbox.govstack.global/driver-poc/login"
+                href="https://cross-border-pay.sandbox.govstack.global/"
                 target="_blank"
                 >User interface Demo</v-btn
               >
-              <div class="infobox">
-                <v-icon :icon="mdiInformationOutline"></v-icon>
-                <p>
-                  This technical demo includes log viewer where you can easily see building blocks
-                  in action.
-                </p>
-              </div>
             </div>
 
             <!-- all resources -->
@@ -185,7 +156,7 @@ const { navigate } = useUI()
                   :prepend-icon="mdiBookOpenBlankVariant"
                   color="gs-primary"
                   variant="outlined"
-                  href="https://govstack.gitbook.io/sandbox/access-demos/usct-use-case"
+                  href="https://govstack.gitbook.io/sandbox"
                   target="_blank"
                   >Documentation</v-btn
                 >
@@ -261,9 +232,10 @@ const { navigate } = useUI()
 /* demo image */
 
 .demo-image {
-  width: 592px;
-  height: 290px;
-  background: url('@/assets/images/cash-transfer-demo-image.png') left center no-repeat;
+  width: 568px;
+  height: 389px;
+  background: url('@/assets/images/cross-border-pay-demo-image.png') left center no-repeat;
+  background-size: 100% 100%
 }
 
 /* demo feature */
