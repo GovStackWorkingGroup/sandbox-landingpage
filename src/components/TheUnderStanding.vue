@@ -33,16 +33,6 @@ import BaseBorderFrame from '@/components/BaseBorderFrame.vue'
                 <v-icon :icon="mdiFileDocumentMultipleOutline" color="gs-green"></v-icon>
                 <p>Technical documentation of the e-service demos</p>
               </div>
-              <div class="feature">
-                <v-icon :icon="mdiLightbulbOutline" color="gs-green"></v-icon>
-                <p>
-                  Do-It-Yourself packages to learn and test specific aspects of GovStack (<a
-                    href="https://www.govstack.global/our-offerings/govspecs/"
-                    target="_blank"
-                    >find more on our documentation page</a
-                  >)
-                </p>
-              </div>
             </div>
             <div class="right">
               <h3>What you <span class="orange">won't</span> find here</h3>
@@ -50,7 +40,7 @@ import BaseBorderFrame from '@/components/BaseBorderFrame.vue'
                 <v-icon :icon="mdiCubeUnfolded" color="gs-orange"></v-icon>
                 <p>
                   Technical building block specifications of GovStack (find them on
-                  <a href="https://www.govstack.global/our-offerings/govspecs/" target="_blank"
+                  <a href="https://specs.govstack.global/" target="_blank"
                     >GovSpecs</a
                   >)
                 </p>
@@ -58,8 +48,7 @@ import BaseBorderFrame from '@/components/BaseBorderFrame.vue'
               <div class="feature">
                 <v-icon :icon="mdiCodeTags" color="gs-orange"></v-icon>
                 <p>
-                  Ready-made software solutions you can integrate into your government
-                  infrastructure (find a list of possible solutions on GovMarket)
+                  Software recommendation (only exemplary implementations) or ready-made software solutions you can directly integrate (find a list of possible software solutions on <a href="https://govstack.global/software/"target="_blank">our marketplace</a>)
                 </p>
               </div>
             </div>
