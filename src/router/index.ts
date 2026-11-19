@@ -39,6 +39,11 @@ const router = createRouter({
       meta: { title: 'GovStack Sandbox - Social Cash Transfer' },
       component: () => import('../views/CashTransferView.vue'),
     },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'notFound',
+      redirect: '/',
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
